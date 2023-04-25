@@ -248,7 +248,7 @@ for(exe_class_i in 1:execution_classification_number)
     print(allExecutionsFinalRanking_mse_Gini[order(-allExecutionsFinalRanking_mse_Gini["MeanDecreaseAccuracy"]), ])
 
 
-    top_features_num <- 3
+    top_features_num <- 4
     selectedFeaturesNames <- rownames((allExecutionsFinalRanking_mse_Gini[order(-allExecutionsFinalRanking_mse_Gini["MeanDecreaseAccuracy"]), ])[1:top_features_num,])
 
     cat("number of selected top features: ", top_features_num, "\n", sep="")
