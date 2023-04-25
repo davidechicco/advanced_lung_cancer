@@ -17,7 +17,10 @@ application of dplyr::select()
  iter imp variable
   1   1  aPTT  bacteremia  BIPAP  Cause_Ca_related  CRP  Death  Death_Cause  Distatntmets  DNR  dx_after_adm  HFNC*  hospital_LOS  line  pallRT  PaO2FiO2  Pneumonia  post_dc_days  post_ICU_HD  post_icu_survival  postICUCPR  postICUCtx  postICURT  prev_wbrt*  procalcitonin*  PT_percent  RRT  smk_hx  timefromdx
   2   1  aPTT  bacteremia  BIPAP  Cause_Ca_related  CRP  Death  Death_Cause  Distatntmets  DNR  dx_after_adm  HFNC*  hospital_LOS  line  pallRT  PaO2FiO2  Pneumonia  post_dc_days  post_ICU_HD  post_icu_survival  postICUCPR  postICUCtx  postICURT  prev_wbrt*  procalcitonin*  PT_percent  RRT  smk_hx  timefromdx
-  3   1  aPTT  bacteremia  BIPAP  Cause_Ca_related  CRP  Death  Death_Cause  Distatntmets  DNR  dx_after_adm  HFNC*  hospital_LOS  line  pallRT  PaO2FiO2  Pneumonia  post_dc_days  post_ICU_HD  post_icu_survival  postICUCPR  postICUCtx  postICURT  prev_wbrt*  procalcitonin*  PT_percent  RRT  smk_hx  timefromdx
+  3   1  aPTT  bacteremia  BIPAP  Cause_Ca_related  CRP  Death  Death_Cause  Distatntmets  DNR  dx_after_adm  HFNC*  hospital_LOS  line  pallRT  PaO2FiO2  Pneumonia  post_dc_days  posWarning message:
+Number of logged events: 453 
+There were 50 or more warnings (use warnings() to see the first 50)
+  timefromdx
   4   1  aPTT  bacteremia  BIPAP  Cause_Ca_related  CRP  Death  Death_Cause  Distatntmets  DNR  dx_after_adm  HFNC*  hospital_LOS  line  pallRT  PaO2FiO2  Pneumonia  post_dc_days  post_ICU_HD  post_icu_survival  postICUCPR  postICUCtx  postICURT  prev_wbrt*  procalcitonin*  PT_percent  RRT  smk_hx  timefromdx
   5   1  aPTT  bacteremia  BIPAP  Cause_Ca_related  CRP  Death  Death_Cause  Distatntmets  DNR  dx_after_adm  HFNC*  hospital_LOS  line  pallRT  PaO2FiO2  Pneumonia  post_dc_days  post_ICU_HD  post_icu_survival  postICUCPR  postICUCtx  postICURT  prev_wbrt*  procalcitonin*  PT_percent  RRT  smk_hx  timefromdx
   6   1  aPTT  bacteremia  BIPAP  Cause_Ca_related  CRP  Death  Death_Cause  Distatntmets  DNR  dx_after_adm  HFNC*  hospital_LOS  line  pallRT  PaO2FiO2  Pneumonia  post_dc_days  post_ICU_HD  post_icu_survival  postICUCPR  postICUCtx  postICURT  prev_wbrt*  procalcitonin*  PT_percent  RRT  smk_hx  timefromdx
@@ -64,4 +67,5513 @@ application of dplyr::select()
   47   1  aPTT  bacteremia  BIPAP  Cause_Ca_related  CRP  Death  Death_Cause  Distatntmets  DNR  dx_after_adm  HFNC*  hospital_LOS  line  pallRT  PaO2FiO2  Pneumonia  post_dc_days  post_ICU_HD  post_icu_survival  postICUCPR  postICUCtx  postICURT  prev_wbrt*  procalcitonin*  PT_percent  RRT  smk_hx  timefromdx
   48   1  aPTT  bacteremia  BIPAP  Cause_Ca_related  CRP  Death  Death_Cause  Distatntmets  DNR  dx_after_adm  HFNC*  hospital_LOS  line  pallRT  PaO2FiO2  Pneumonia  post_dc_days  post_ICU_HD  post_icu_survival  postICUCPR  postICUCtx  postICURT  prev_wbrt*  procalcitonin*  PT_percent  RRT  smk_hx  timefromdx
   49   1  aPTT  bacteremia  BIPAP  Cause_Ca_related  CRP  Death  Death_Cause  Distatntmets  DNR  dx_after_adm  HFNC*  hospital_LOS  line  pallRT  PaO2FiO2  Pneumonia  post_dc_days  post_ICU_HD  post_icu_survival  postICUCPR  postICUCtx  postICURT  prev_wbrt*  procalcitonin*  PT_percent  RRT  smk_hx  timefromdx
-  50   1  aPTT  bacteremia  BIPAP  Cause_Ca_related  CRP  Death  Death_Cause  Distatntmets  DNR  dx_after_adm  HFNC*  hospital_LOS  line  pallRT  PaO2FiO2  Pneumonia  post_dc_days  post_ICU_HD  post_icu_survival  postICUCPR  postICUCtx  postICURT  prev_wbrt
+  50   1  aPTT  bacteremia  BIPAP  Cause_Ca_related  CRP  Death  Death_Cause  Distatntmets  DNR  dx_after_adm  HFNC*  hospital_LOS  line  pallRT  PaO2FiO2  Pneumonia  post_dc_days  post_ICU_HD  post_icu_survival  postICUCPR  postICUCtx  postICURT  prev_wbrt*  procalcitonin*  PT_percent  RRT  smk_hx  timefromdx
+Number of executions = 100
+[Execlution number 1 out of 100]
+[Randomizing the rows]
+target_label = target
+[Dataset size]
+number of data instances (rows) = 264 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 195]
+73.864%
+[class: 1  #elements = 69]
+26.136%
+
+[training set = 80%]
+[test set = 20%]
+[Creating the training set and test set for the values]
+
+check
+[training set dimensions:  211  patients]
+[test set dimensions:  53  patients]
+[Creating the training set and test set for the labels "1"-"0"]
+[Dataset size]
+number of data instances (rows) = 211 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 104]
+49.289%
+[class: 1  #elements = 107]
+50.711%
+
+
+[Training the random forest classifier on the training set]
+
+[Applying the trained random forest classifier on the test set]
+
+PR AUC (integral) 	0.657786
+ROC AUC 		0.8030303
+
+Brier score =  NA  (best value: 0; worst value: 1)
+
+TOTAL:
+
+ FN =  2  /  11 	 (truth == 1) & (prediction < threshold)
+ TP =  9  /  11 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  18  /  42 	 (truth == 0) & (prediction >= threshold)
+ TN =  24  /  42 	 (truth == 0) & (prediction < threshold)
+
+
+
+ @@@ Test set @@@ 	MCC 	 F1_score 	accuracy 	TP_rate 	TN_rate 	PPV 		NPV 		PR AUC 	ROC AUC
+@@@ Test set @@@      0.316 	 0.474 	 	0.623 	 	0.818 	 	0.571		0.333	 	0.923	 	0.658	0.803
+
+[Execlution number 2 out of 100]
+[Randomizing the rows]
+target_label = target
+[Dataset size]
+number of data instances (rows) = 264 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 195]
+73.864%
+[class: 1  #elements = 69]
+26.136%
+
+[training set = 80%]
+[test set = 20%]
+[Creating the training set and test set for the values]
+
+check
+[training set dimensions:  211  patients]
+[test set dimensions:  53  patients]
+[Creating the training set and test set for the labels "1"-"0"]
+[Dataset size]
+number of data instances (rows) = 211 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 104]
+49.289%
+[class: 1  #elements = 107]
+50.711%
+
+
+[Training the random forest classifier on the training set]
+
+[Applying the trained random forest classifier on the test set]
+
+PR AUC (integral) 	0.6380685
+ROC AUC 		0.768315
+
+Brier score =  NA  (best value: 0; worst value: 1)
+
+TOTAL:
+
+ FN =  3  /  14 	 (truth == 1) & (prediction < threshold)
+ TP =  11  /  14 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  15  /  39 	 (truth == 0) & (prediction >= threshold)
+ TN =  24  /  39 	 (truth == 0) & (prediction < threshold)
+
+
+
+ @@@ Test set @@@ 	MCC 	 F1_score 	accuracy 	TP_rate 	TN_rate 	PPV 		NPV 		PR AUC 	ROC AUC
+@@@ Test set @@@      0.354 	 0.550 	 	0.660 	 	0.786 	 	0.615		0.423	 	0.889	 	0.638	0.768
+
+[Execlution number 3 out of 100]
+[Randomizing the rows]
+target_label = target
+[Dataset size]
+number of data instances (rows) = 264 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 195]
+73.864%
+[class: 1  #elements = 69]
+26.136%
+
+[training set = 80%]
+[test set = 20%]
+[Creating the training set and test set for the values]
+
+check
+[training set dimensions:  211  patients]
+[test set dimensions:  53  patients]
+[Creating the training set and test set for the labels "1"-"0"]
+[Dataset size]
+number of data instances (rows) = 211 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 104]
+49.289%
+[class: 1  #elements = 107]
+50.711%
+
+
+[Training the random forest classifier on the training set]
+
+[Applying the trained random forest classifier on the test set]
+
+PR AUC (integral) 	0.7040792
+ROC AUC 		0.8614035
+
+Brier score =  NA  (best value: 0; worst value: 1)
+
+TOTAL:
+
+ FN =  2  /  15 	 (truth == 1) & (prediction < threshold)
+ TP =  13  /  15 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  10  /  38 	 (truth == 0) & (prediction >= threshold)
+ TN =  28  /  38 	 (truth == 0) & (prediction < threshold)
+
+
+
+ @@@ Test set @@@ 	MCC 	 F1_score 	accuracy 	TP_rate 	TN_rate 	PPV 		NPV 		PR AUC 	ROC AUC
+@@@ Test set @@@      0.549 	 0.684 	 	0.774 	 	0.867 	 	0.737		0.565	 	0.933	 	0.704	0.861
+
+[Execlution number 4 out of 100]
+[Randomizing the rows]
+target_label = target
+[Dataset size]
+number of data instances (rows) = 264 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 195]
+73.864%
+[class: 1  #elements = 69]
+26.136%
+
+[training set = 80%]
+[test set = 20%]
+[Creating the training set and test set for the values]
+
+check
+[training set dimensions:  211  patients]
+[test set dimensions:  53  patients]
+[Creating the training set and test set for the labels "1"-"0"]
+[Dataset size]
+number of data instances (rows) = 211 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 104]
+49.289%
+[class: 1  #elements = 107]
+50.711%
+
+
+[Training the random forest classifier on the training set]
+
+[Applying the trained random forest classifier on the test set]
+
+PR AUC (integral) 	0.754819
+ROC AUC 		0.8421053
+
+Brier score =  NA  (best value: 0; worst value: 1)
+
+TOTAL:
+
+ FN =  3  /  15 	 (truth == 1) & (prediction < threshold)
+ TP =  12  /  15 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  10  /  38 	 (truth == 0) & (prediction >= threshold)
+ TN =  28  /  38 	 (truth == 0) & (prediction < threshold)
+
+
+
+ @@@ Test set @@@ 	MCC 	 F1_score 	accuracy 	TP_rate 	TN_rate 	PPV 		NPV 		PR AUC 	ROC AUC
+@@@ Test set @@@      0.491 	 0.649 	 	0.755 	 	0.800 	 	0.737		0.545	 	0.903	 	0.755	0.842
+
+[Execlution number 5 out of 100]
+[Randomizing the rows]
+target_label = target
+[Dataset size]
+number of data instances (rows) = 264 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 195]
+73.864%
+[class: 1  #elements = 69]
+26.136%
+
+[training set = 80%]
+[test set = 20%]
+[Creating the training set and test set for the values]
+
+check
+[training set dimensions:  211  patients]
+[test set dimensions:  53  patients]
+[Creating the training set and test set for the labels "1"-"0"]
+[Dataset size]
+number of data instances (rows) = 211 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 104]
+49.289%
+[class: 1  #elements = 107]
+50.711%
+
+
+[Training the random forest classifier on the training set]
+
+[Applying the trained random forest classifier on the test set]
+
+PR AUC (integral) 	0.5374684
+ROC AUC 		0.8602484
+
+Brier score =  NA  (best value: 0; worst value: 1)
+
+TOTAL:
+
+ FN =  0  /  7 	 (truth == 1) & (prediction < threshold)
+ TP =  7  /  7 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  17  /  46 	 (truth == 0) & (prediction >= threshold)
+ TN =  29  /  46 	 (truth == 0) & (prediction < threshold)
+
+
+
+ @@@ Test set @@@ 	MCC 	 F1_score 	accuracy 	TP_rate 	TN_rate 	PPV 		NPV 		PR AUC 	ROC AUC
+@@@ Test set @@@      0.429 	 0.452 	 	0.679 	 	1.000 	 	0.630		0.292	 	1.000	 	0.537	0.860
+
+[Execlution number 6 out of 100]
+[Randomizing the rows]
+target_label = target
+[Dataset size]
+number of data instances (rows) = 264 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 195]
+73.864%
+[class: 1  #elements = 69]
+26.136%
+
+[training set = 80%]
+[test set = 20%]
+[Creating the training set and test set for the values]
+
+check
+[training set dimensions:  211  patients]
+[test set dimensions:  53  patients]
+[Creating the training set and test set for the labels "1"-"0"]
+[Dataset size]
+number of data instances (rows) = 211 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 104]
+49.289%
+[class: 1  #elements = 107]
+50.711%
+
+
+[Training the random forest classifier on the training set]
+
+[Applying the trained random forest classifier on the test set]
+
+PR AUC (integral) 	0.7245963
+ROC AUC 		0.8552632
+
+Brier score =  NA  (best value: 0; worst value: 1)
+
+TOTAL:
+
+ FN =  0  /  15 	 (truth == 1) & (prediction < threshold)
+ TP =  15  /  15 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  21  /  38 	 (truth == 0) & (prediction >= threshold)
+ TN =  17  /  38 	 (truth == 0) & (prediction < threshold)
+
+
+
+ @@@ Test set @@@ 	MCC 	 F1_score 	accuracy 	TP_rate 	TN_rate 	PPV 		NPV 		PR AUC 	ROC AUC
+@@@ Test set @@@      0.432 	 0.588 	 	0.604 	 	1.000 	 	0.447		0.417	 	1.000	 	0.725	0.855
+
+[Execlution number 7 out of 100]
+[Randomizing the rows]
+target_label = target
+[Dataset size]
+number of data instances (rows) = 264 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 195]
+73.864%
+[class: 1  #elements = 69]
+26.136%
+
+[training set = 80%]
+[test set = 20%]
+[Creating the training set and test set for the values]
+
+check
+[training set dimensions:  211  patients]
+[test set dimensions:  53  patients]
+[Creating the training set and test set for the labels "1"-"0"]
+[Dataset size]
+number of data instances (rows) = 211 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 104]
+49.289%
+[class: 1  #elements = 107]
+50.711%
+
+
+[Training the random forest classifier on the training set]
+
+[Applying the trained random forest classifier on the test set]
+
+PR AUC (integral) 	0.8690362
+ROC AUC 		0.8864943
+
+Brier score =  NA  (best value: 0; worst value: 1)
+
+TOTAL:
+
+ FN =  1  /  24 	 (truth == 1) & (prediction < threshold)
+ TP =  23  /  24 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  16  /  29 	 (truth == 0) & (prediction >= threshold)
+ TN =  13  /  29 	 (truth == 0) & (prediction < threshold)
+
+
+
+ @@@ Test set @@@ 	MCC 	 F1_score 	accuracy 	TP_rate 	TN_rate 	PPV 		NPV 		PR AUC 	ROC AUC
+@@@ Test set @@@      0.459 	 0.730 	 	0.679 	 	0.958 	 	0.448		0.590	 	0.929	 	0.869	0.886
+
+[Execlution number 8 out of 100]
+[Randomizing the rows]
+target_label = target
+[Dataset size]
+number of data instances (rows) = 264 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 195]
+73.864%
+[class: 1  #elements = 69]
+26.136%
+
+[training set = 80%]
+[test set = 20%]
+[Creating the training set and test set for the values]
+
+check
+[training set dimensions:  211  patients]
+[test set dimensions:  53  patients]
+[Creating the training set and test set for the labels "1"-"0"]
+[Dataset size]
+number of data instances (rows) = 211 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 104]
+49.289%
+[class: 1  #elements = 107]
+50.711%
+
+
+[Training the random forest classifier on the training set]
+
+[Applying the trained random forest classifier on the test set]
+
+PR AUC (integral) 	0.6265855
+ROC AUC 		0.8663004
+
+Brier score =  NA  (best value: 0; worst value: 1)
+
+TOTAL:
+
+ FN =  5  /  14 	 (truth == 1) & (prediction < threshold)
+ TP =  9  /  14 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  7  /  39 	 (truth == 0) & (prediction >= threshold)
+ TN =  32  /  39 	 (truth == 0) & (prediction < threshold)
+
+
+
+ @@@ Test set @@@ 	MCC 	 F1_score 	accuracy 	TP_rate 	TN_rate 	PPV 		NPV 		PR AUC 	ROC AUC
+@@@ Test set @@@      0.445 	 0.600 	 	0.774 	 	0.643 	 	0.821		0.562	 	0.865	 	0.627	0.866
+
+[Execlution number 9 out of 100]
+[Randomizing the rows]
+target_label = target
+[Dataset size]
+number of data instances (rows) = 264 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 195]
+73.864%
+[class: 1  #elements = 69]
+26.136%
+
+[training set = 80%]
+[test set = 20%]
+[Creating the training set and test set for the values]
+
+check
+[training set dimensions:  211  patients]
+[test set dimensions:  53  patients]
+[Creating the training set and test set for the labels "1"-"0"]
+[Dataset size]
+number of data instances (rows) = 211 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 104]
+49.289%
+[class: 1  #elements = 107]
+50.711%
+
+
+[Training the random forest classifier on the training set]
+
+[Applying the trained random forest classifier on the test set]
+
+PR AUC (integral) 	0.7755549
+ROC AUC 		0.790293
+
+Brier score =  NA  (best value: 0; worst value: 1)
+
+TOTAL:
+
+ FN =  3  /  14 	 (truth == 1) & (prediction < threshold)
+ TP =  11  /  14 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  20  /  39 	 (truth == 0) & (prediction >= threshold)
+ TN =  19  /  39 	 (truth == 0) & (prediction < threshold)
+
+
+
+ @@@ Test set @@@ 	MCC 	 F1_score 	accuracy 	TP_rate 	TN_rate 	PPV 		NPV 		PR AUC 	ROC AUC
+@@@ Test set @@@      0.244 	 0.489 	 	0.566 	 	0.786 	 	0.487		0.355	 	0.864	 	0.776	0.790
+
+[Execlution number 10 out of 100]
+[Randomizing the rows]
+target_label = target
+[Dataset size]
+number of data instances (rows) = 264 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 195]
+73.864%
+[class: 1  #elements = 69]
+26.136%
+
+[training set = 80%]
+[test set = 20%]
+[Creating the training set and test set for the values]
+
+check
+[training set dimensions:  211  patients]
+[test set dimensions:  53  patients]
+[Creating the training set and test set for the labels "1"-"0"]
+[Dataset size]
+number of data instances (rows) = 211 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 104]
+49.289%
+[class: 1  #elements = 107]
+50.711%
+
+
+[Training the random forest classifier on the training set]
+
+[Applying the trained random forest classifier on the test set]
+
+PR AUC (integral) 	0.870528
+ROC AUC 		0.9432234
+
+Brier score =  NA  (best value: 0; worst value: 1)
+
+TOTAL:
+
+ FN =  3  /  14 	 (truth == 1) & (prediction < threshold)
+ TP =  11  /  14 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  5  /  39 	 (truth == 0) & (prediction >= threshold)
+ TN =  34  /  39 	 (truth == 0) & (prediction < threshold)
+
+
+
+ @@@ Test set @@@ 	MCC 	 F1_score 	accuracy 	TP_rate 	TN_rate 	PPV 		NPV 		PR AUC 	ROC AUC
+@@@ Test set @@@      0.631 	 0.733 	 	0.849 	 	0.786 	 	0.872		0.688	 	0.919	 	0.871	0.943
+
+[Execlution number 11 out of 100]
+[Randomizing the rows]
+target_label = target
+[Dataset size]
+number of data instances (rows) = 264 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 195]
+73.864%
+[class: 1  #elements = 69]
+26.136%
+
+[training set = 80%]
+[test set = 20%]
+[Creating the training set and test set for the values]
+
+check
+[training set dimensions:  211  patients]
+[test set dimensions:  53  patients]
+[Creating the training set and test set for the labels "1"-"0"]
+[Dataset size]
+number of data instances (rows) = 211 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 104]
+49.289%
+[class: 1  #elements = 107]
+50.711%
+
+
+[Training the random forest classifier on the training set]
+
+[Applying the trained random forest classifier on the test set]
+
+PR AUC (integral) 	0.7925522
+ROC AUC 		0.8701754
+
+Brier score =  NA  (best value: 0; worst value: 1)
+
+TOTAL:
+
+ FN =  1  /  15 	 (truth == 1) & (prediction < threshold)
+ TP =  14  /  15 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  21  /  38 	 (truth == 0) & (prediction >= threshold)
+ TN =  17  /  38 	 (truth == 0) & (prediction < threshold)
+
+
+
+ @@@ Test set @@@ 	MCC 	 F1_score 	accuracy 	TP_rate 	TN_rate 	PPV 		NPV 		PR AUC 	ROC AUC
+@@@ Test set @@@      0.362 	 0.560 	 	0.585 	 	0.933 	 	0.447		0.400	 	0.944	 	0.793	0.870
+
+[Execlution number 12 out of 100]
+[Randomizing the rows]
+target_label = target
+[Dataset size]
+number of data instances (rows) = 264 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 195]
+73.864%
+[class: 1  #elements = 69]
+26.136%
+
+[training set = 80%]
+[test set = 20%]
+[Creating the training set and test set for the values]
+
+check
+[training set dimensions:  211  patients]
+[test set dimensions:  53  patients]
+[Creating the training set and test set for the labels "1"-"0"]
+[Dataset size]
+number of data instances (rows) = 211 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 104]
+49.289%
+[class: 1  #elements = 107]
+50.711%
+
+
+[Training the random forest classifier on the training set]
+
+[Applying the trained random forest classifier on the test set]
+
+PR AUC (integral) 	0.8061738
+ROC AUC 		0.8894231
+
+Brier score =  NA  (best value: 0; worst value: 1)
+
+TOTAL:
+
+ FN =  2  /  13 	 (truth == 1) & (prediction < threshold)
+ TP =  11  /  13 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  11  /  40 	 (truth == 0) & (prediction >= threshold)
+ TN =  29  /  40 	 (truth == 0) & (prediction < threshold)
+
+
+
+ @@@ Test set @@@ 	MCC 	 F1_score 	accuracy 	TP_rate 	TN_rate 	PPV 		NPV 		PR AUC 	ROC AUC
+@@@ Test set @@@      0.499 	 0.629 	 	0.755 	 	0.846 	 	0.725		0.500	 	0.935	 	0.806	0.889
+
+[Execlution number 13 out of 100]
+[Randomizing the rows]
+target_label = target
+[Dataset size]
+number of data instances (rows) = 264 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 195]
+73.864%
+[class: 1  #elements = 69]
+26.136%
+
+[training set = 80%]
+[test set = 20%]
+[Creating the training set and test set for the values]
+
+check
+[training set dimensions:  211  patients]
+[test set dimensions:  53  patients]
+[Creating the training set and test set for the labels "1"-"0"]
+[Dataset size]
+number of data instances (rows) = 211 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 104]
+49.289%
+[class: 1  #elements = 107]
+50.711%
+
+
+[Training the random forest classifier on the training set]
+
+[Applying the trained random forest classifier on the test set]
+
+PR AUC (integral) 	0.7338165
+ROC AUC 		0.8903509
+
+Brier score =  NA  (best value: 0; worst value: 1)
+
+TOTAL:
+
+ FN =  7  /  15 	 (truth == 1) & (prediction < threshold)
+ TP =  8  /  15 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  3  /  38 	 (truth == 0) & (prediction >= threshold)
+ TN =  35  /  38 	 (truth == 0) & (prediction < threshold)
+
+
+
+ @@@ Test set @@@ 	MCC 	 F1_score 	accuracy 	TP_rate 	TN_rate 	PPV 		NPV 		PR AUC 	ROC AUC
+@@@ Test set @@@      0.505 	 0.615 	 	0.811 	 	0.533 	 	0.921		0.727	 	0.833	 	0.734	0.890
+
+[Execlution number 14 out of 100]
+[Randomizing the rows]
+target_label = target
+[Dataset size]
+number of data instances (rows) = 264 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 195]
+73.864%
+[class: 1  #elements = 69]
+26.136%
+
+[training set = 80%]
+[test set = 20%]
+[Creating the training set and test set for the values]
+
+check
+[training set dimensions:  211  patients]
+[test set dimensions:  53  patients]
+[Creating the training set and test set for the labels "1"-"0"]
+[Dataset size]
+number of data instances (rows) = 211 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 104]
+49.289%
+[class: 1  #elements = 107]
+50.711%
+
+
+[Training the random forest classifier on the training set]
+
+[Applying the trained random forest classifier on the test set]
+
+PR AUC (integral) 	0.6093306
+ROC AUC 		0.8105769
+
+Brier score =  NA  (best value: 0; worst value: 1)
+
+TOTAL:
+
+ FN =  1  /  13 	 (truth == 1) & (prediction < threshold)
+ TP =  12  /  13 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  20  /  40 	 (truth == 0) & (prediction >= threshold)
+ TN =  20  /  40 	 (truth == 0) & (prediction < threshold)
+
+
+
+ @@@ Test set @@@ 	MCC 	 F1_score 	accuracy 	TP_rate 	TN_rate 	PPV 		NPV 		PR AUC 	ROC AUC
+@@@ Test set @@@      0.372 	 0.533 	 	0.604 	 	0.923 	 	0.500		0.375	 	0.952	 	0.609	0.811
+
+[Execlution number 15 out of 100]
+[Randomizing the rows]
+target_label = target
+[Dataset size]
+number of data instances (rows) = 264 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 195]
+73.864%
+[class: 1  #elements = 69]
+26.136%
+
+[training set = 80%]
+[test set = 20%]
+[Creating the training set and test set for the values]
+
+check
+[training set dimensions:  211  patients]
+[test set dimensions:  53  patients]
+[Creating the training set and test set for the labels "1"-"0"]
+[Dataset size]
+number of data instances (rows) = 211 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 104]
+49.289%
+[class: 1  #elements = 107]
+50.711%
+
+
+[Training the random forest classifier on the training set]
+
+[Applying the trained random forest classifier on the test set]
+
+PR AUC (integral) 	0.7714119
+ROC AUC 		0.8942308
+
+Brier score =  NA  (best value: 0; worst value: 1)
+
+TOTAL:
+
+ FN =  4  /  13 	 (truth == 1) & (prediction < threshold)
+ TP =  9  /  13 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  3  /  40 	 (truth == 0) & (prediction >= threshold)
+ TN =  37  /  40 	 (truth == 0) & (prediction < threshold)
+
+
+
+ @@@ Test set @@@ 	MCC 	 F1_score 	accuracy 	TP_rate 	TN_rate 	PPV 		NPV 		PR AUC 	ROC AUC
+@@@ Test set @@@      0.635 	 0.720 	 	0.868 	 	0.692 	 	0.925		0.750	 	0.902	 	0.771	0.894
+
+[Execlution number 16 out of 100]
+[Randomizing the rows]
+target_label = target
+[Dataset size]
+number of data instances (rows) = 264 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 195]
+73.864%
+[class: 1  #elements = 69]
+26.136%
+
+[training set = 80%]
+[test set = 20%]
+[Creating the training set and test set for the values]
+
+check
+[training set dimensions:  211  patients]
+[test set dimensions:  53  patients]
+[Creating the training set and test set for the labels "1"-"0"]
+[Dataset size]
+number of data instances (rows) = 211 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 104]
+49.289%
+[class: 1  #elements = 107]
+50.711%
+
+
+[Training the random forest classifier on the training set]
+
+[Applying the trained random forest classifier on the test set]
+
+PR AUC (integral) 	0.697204
+ROC AUC 		0.8971861
+
+Brier score =  NA  (best value: 0; worst value: 1)
+
+TOTAL:
+
+ FN =  1  /  11 	 (truth == 1) & (prediction < threshold)
+ TP =  10  /  11 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  11  /  42 	 (truth == 0) & (prediction >= threshold)
+ TN =  31  /  42 	 (truth == 0) & (prediction < threshold)
+
+
+
+ @@@ Test set @@@ 	MCC 	 F1_score 	accuracy 	TP_rate 	TN_rate 	PPV 		NPV 		PR AUC 	ROC AUC
+@@@ Test set @@@      0.537 	 0.625 	 	0.774 	 	0.909 	 	0.738		0.476	 	0.969	 	0.697	0.897
+
+[Execlution number 17 out of 100]
+[Randomizing the rows]
+target_label = target
+[Dataset size]
+number of data instances (rows) = 264 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 195]
+73.864%
+[class: 1  #elements = 69]
+26.136%
+
+[training set = 80%]
+[test set = 20%]
+[Creating the training set and test set for the values]
+
+check
+[training set dimensions:  211  patients]
+[test set dimensions:  53  patients]
+[Creating the training set and test set for the labels "1"-"0"]
+[Dataset size]
+number of data instances (rows) = 211 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 104]
+49.289%
+[class: 1  #elements = 107]
+50.711%
+
+
+[Training the random forest classifier on the training set]
+
+[Applying the trained random forest classifier on the test set]
+
+PR AUC (integral) 	0.7205693
+ROC AUC 		0.854386
+
+Brier score =  NA  (best value: 0; worst value: 1)
+
+TOTAL:
+
+ FN =  0  /  15 	 (truth == 1) & (prediction < threshold)
+ TP =  15  /  15 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  25  /  38 	 (truth == 0) & (prediction >= threshold)
+ TN =  13  /  38 	 (truth == 0) & (prediction < threshold)
+
+
+
+ @@@ Test set @@@ 	MCC 	 F1_score 	accuracy 	TP_rate 	TN_rate 	PPV 		NPV 		PR AUC 	ROC AUC
+@@@ Test set @@@      0.358 	 0.545 	 	0.528 	 	1.000 	 	0.342		0.375	 	1.000	 	0.721	0.854
+
+[Execlution number 18 out of 100]
+[Randomizing the rows]
+target_label = target
+[Dataset size]
+number of data instances (rows) = 264 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 195]
+73.864%
+[class: 1  #elements = 69]
+26.136%
+
+[training set = 80%]
+[test set = 20%]
+[Creating the training set and test set for the values]
+
+check
+[training set dimensions:  211  patients]
+[test set dimensions:  53  patients]
+[Creating the training set and test set for the labels "1"-"0"]
+[Dataset size]
+number of data instances (rows) = 211 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 104]
+49.289%
+[class: 1  #elements = 107]
+50.711%
+
+
+[Training the random forest classifier on the training set]
+
+[Applying the trained random forest classifier on the test set]
+
+PR AUC (integral) 	0.764799
+ROC AUC 		0.8836538
+
+Brier score =  NA  (best value: 0; worst value: 1)
+
+TOTAL:
+
+ FN =  0  /  13 	 (truth == 1) & (prediction < threshold)
+ TP =  13  /  13 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  20  /  40 	 (truth == 0) & (prediction >= threshold)
+ TN =  20  /  40 	 (truth == 0) & (prediction < threshold)
+
+
+
+ @@@ Test set @@@ 	MCC 	 F1_score 	accuracy 	TP_rate 	TN_rate 	PPV 		NPV 		PR AUC 	ROC AUC
+@@@ Test set @@@      0.444 	 0.565 	 	0.623 	 	1.000 	 	0.500		0.394	 	1.000	 	0.765	0.884
+
+[Execlution number 19 out of 100]
+[Randomizing the rows]
+target_label = target
+[Dataset size]
+number of data instances (rows) = 264 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 195]
+73.864%
+[class: 1  #elements = 69]
+26.136%
+
+[training set = 80%]
+[test set = 20%]
+[Creating the training set and test set for the values]
+
+check
+[training set dimensions:  211  patients]
+[test set dimensions:  53  patients]
+[Creating the training set and test set for the labels "1"-"0"]
+[Dataset size]
+number of data instances (rows) = 211 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 104]
+49.289%
+[class: 1  #elements = 107]
+50.711%
+
+
+[Training the random forest classifier on the training set]
+
+[Applying the trained random forest classifier on the test set]
+
+PR AUC (integral) 	0.7555065
+ROC AUC 		0.9105691
+
+Brier score =  NA  (best value: 0; worst value: 1)
+
+TOTAL:
+
+ FN =  3  /  12 	 (truth == 1) & (prediction < threshold)
+ TP =  9  /  12 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  3  /  41 	 (truth == 0) & (prediction >= threshold)
+ TN =  38  /  41 	 (truth == 0) & (prediction < threshold)
+
+
+
+ @@@ Test set @@@ 	MCC 	 F1_score 	accuracy 	TP_rate 	TN_rate 	PPV 		NPV 		PR AUC 	ROC AUC
+@@@ Test set @@@      0.677 	 0.750 	 	0.887 	 	0.750 	 	0.927		0.750	 	0.927	 	0.756	0.911
+
+[Execlution number 20 out of 100]
+[Randomizing the rows]
+target_label = target
+[Dataset size]
+number of data instances (rows) = 264 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 195]
+73.864%
+[class: 1  #elements = 69]
+26.136%
+
+[training set = 80%]
+[test set = 20%]
+[Creating the training set and test set for the values]
+
+check
+[training set dimensions:  211  patients]
+[test set dimensions:  53  patients]
+[Creating the training set and test set for the labels "1"-"0"]
+[Dataset size]
+number of data instances (rows) = 211 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 104]
+49.289%
+[class: 1  #elements = 107]
+50.711%
+
+
+[Training the random forest classifier on the training set]
+
+[Applying the trained random forest classifier on the test set]
+
+PR AUC (integral) 	0.6368041
+ROC AUC 		0.8678862
+
+Brier score =  NA  (best value: 0; worst value: 1)
+
+TOTAL:
+
+ FN =  3  /  12 	 (truth == 1) & (prediction < threshold)
+ TP =  9  /  12 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  4  /  41 	 (truth == 0) & (prediction >= threshold)
+ TN =  37  /  41 	 (truth == 0) & (prediction < threshold)
+
+
+
+ @@@ Test set @@@ 	MCC 	 F1_score 	accuracy 	TP_rate 	TN_rate 	PPV 		NPV 		PR AUC 	ROC AUC
+@@@ Test set @@@      0.635 	 0.720 	 	0.868 	 	0.750 	 	0.902		0.692	 	0.925	 	0.637	0.868
+
+[Execlution number 21 out of 100]
+[Randomizing the rows]
+target_label = target
+[Dataset size]
+number of data instances (rows) = 264 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 195]
+73.864%
+[class: 1  #elements = 69]
+26.136%
+
+[training set = 80%]
+[test set = 20%]
+[Creating the training set and test set for the values]
+
+check
+[training set dimensions:  211  patients]
+[test set dimensions:  53  patients]
+[Creating the training set and test set for the labels "1"-"0"]
+[Dataset size]
+number of data instances (rows) = 211 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 104]
+49.289%
+[class: 1  #elements = 107]
+50.711%
+
+
+[Training the random forest classifier on the training set]
+
+[Applying the trained random forest classifier on the test set]
+
+PR AUC (integral) 	0.7839925
+ROC AUC 		0.9404762
+
+Brier score =  NA  (best value: 0; worst value: 1)
+
+TOTAL:
+
+ FN =  0  /  11 	 (truth == 1) & (prediction < threshold)
+ TP =  11  /  11 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  9  /  42 	 (truth == 0) & (prediction >= threshold)
+ TN =  33  /  42 	 (truth == 0) & (prediction < threshold)
+
+
+
+ @@@ Test set @@@ 	MCC 	 F1_score 	accuracy 	TP_rate 	TN_rate 	PPV 		NPV 		PR AUC 	ROC AUC
+@@@ Test set @@@      0.657 	 0.710 	 	0.830 	 	1.000 	 	0.786		0.550	 	1.000	 	0.784	0.940
+
+[Execlution number 22 out of 100]
+[Randomizing the rows]
+target_label = target
+[Dataset size]
+number of data instances (rows) = 264 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 195]
+73.864%
+[class: 1  #elements = 69]
+26.136%
+
+[training set = 80%]
+[test set = 20%]
+[Creating the training set and test set for the values]
+
+check
+[training set dimensions:  211  patients]
+[test set dimensions:  53  patients]
+[Creating the training set and test set for the labels "1"-"0"]
+[Dataset size]
+number of data instances (rows) = 211 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 104]
+49.289%
+[class: 1  #elements = 107]
+50.711%
+
+
+[Training the random forest classifier on the training set]
+
+[Applying the trained random forest classifier on the test set]
+
+PR AUC (integral) 	0.7390652
+ROC AUC 		0.7930403
+
+Brier score =  NA  (best value: 0; worst value: 1)
+
+TOTAL:
+
+ FN =  2  /  14 	 (truth == 1) & (prediction < threshold)
+ TP =  12  /  14 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  16  /  39 	 (truth == 0) & (prediction >= threshold)
+ TN =  23  /  39 	 (truth == 0) & (prediction < threshold)
+
+
+
+ @@@ Test set @@@ 	MCC 	 F1_score 	accuracy 	TP_rate 	TN_rate 	PPV 		NPV 		PR AUC 	ROC AUC
+@@@ Test set @@@      0.395 	 0.571 	 	0.660 	 	0.857 	 	0.590		0.429	 	0.920	 	0.739	0.793
+
+[Execlution number 23 out of 100]
+[Randomizing the rows]
+target_label = target
+[Dataset size]
+number of data instances (rows) = 264 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 195]
+73.864%
+[class: 1  #elements = 69]
+26.136%
+
+[training set = 80%]
+[test set = 20%]
+[Creating the training set and test set for the values]
+
+check
+[training set dimensions:  211  patients]
+[test set dimensions:  53  patients]
+[Creating the training set and test set for the labels "1"-"0"]
+[Dataset size]
+number of data instances (rows) = 211 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 104]
+49.289%
+[class: 1  #elements = 107]
+50.711%
+
+
+[Training the random forest classifier on the training set]
+
+[Applying the trained random forest classifier on the test set]
+
+PR AUC (integral) 	0.7464987
+ROC AUC 		0.875
+
+Brier score =  NA  (best value: 0; worst value: 1)
+
+TOTAL:
+
+ FN =  3  /  12 	 (truth == 1) & (prediction < threshold)
+ TP =  9  /  12 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  11  /  41 	 (truth == 0) & (prediction >= threshold)
+ TN =  30  /  41 	 (truth == 0) & (prediction < threshold)
+
+
+
+ @@@ Test set @@@ 	MCC 	 F1_score 	accuracy 	TP_rate 	TN_rate 	PPV 		NPV 		PR AUC 	ROC AUC
+@@@ Test set @@@      0.416 	 0.562 	 	0.736 	 	0.750 	 	0.732		0.450	 	0.909	 	0.746	0.875
+
+[Execlution number 24 out of 100]
+[Randomizing the rows]
+target_label = target
+[Dataset size]
+number of data instances (rows) = 264 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 195]
+73.864%
+[class: 1  #elements = 69]
+26.136%
+
+[training set = 80%]
+[test set = 20%]
+[Creating the training set and test set for the values]
+
+check
+[training set dimensions:  211  patients]
+[test set dimensions:  53  patients]
+[Creating the training set and test set for the labels "1"-"0"]
+[Dataset size]
+number of data instances (rows) = 211 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 104]
+49.289%
+[class: 1  #elements = 107]
+50.711%
+
+
+[Training the random forest classifier on the training set]
+
+[Applying the trained random forest classifier on the test set]
+
+PR AUC (integral) 	0.7672073
+ROC AUC 		0.8360806
+
+Brier score =  NA  (best value: 0; worst value: 1)
+
+TOTAL:
+
+ FN =  2  /  14 	 (truth == 1) & (prediction < threshold)
+ TP =  12  /  14 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  16  /  39 	 (truth == 0) & (prediction >= threshold)
+ TN =  23  /  39 	 (truth == 0) & (prediction < threshold)
+
+
+
+ @@@ Test set @@@ 	MCC 	 F1_score 	accuracy 	TP_rate 	TN_rate 	PPV 		NPV 		PR AUC 	ROC AUC
+@@@ Test set @@@      0.395 	 0.571 	 	0.660 	 	0.857 	 	0.590		0.429	 	0.920	 	0.767	0.836
+
+[Execlution number 25 out of 100]
+[Randomizing the rows]
+target_label = target
+[Dataset size]
+number of data instances (rows) = 264 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 195]
+73.864%
+[class: 1  #elements = 69]
+26.136%
+
+[training set = 80%]
+[test set = 20%]
+[Creating the training set and test set for the values]
+
+check
+[training set dimensions:  211  patients]
+[test set dimensions:  53  patients]
+[Creating the training set and test set for the labels "1"-"0"]
+[Dataset size]
+number of data instances (rows) = 211 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 104]
+49.289%
+[class: 1  #elements = 107]
+50.711%
+
+
+[Training the random forest classifier on the training set]
+
+[Applying the trained random forest classifier on the test set]
+
+PR AUC (integral) 	0.8436682
+ROC AUC 		0.8653274
+
+Brier score =  NA  (best value: 0; worst value: 1)
+
+TOTAL:
+
+ FN =  0  /  21 	 (truth == 1) & (prediction < threshold)
+ TP =  21  /  21 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  22  /  32 	 (truth == 0) & (prediction >= threshold)
+ TN =  10  /  32 	 (truth == 0) & (prediction < threshold)
+
+
+
+ @@@ Test set @@@ 	MCC 	 F1_score 	accuracy 	TP_rate 	TN_rate 	PPV 		NPV 		PR AUC 	ROC AUC
+@@@ Test set @@@      0.391 	 0.656 	 	0.585 	 	1.000 	 	0.312		0.488	 	1.000	 	0.844	0.865
+
+[Execlution number 26 out of 100]
+[Randomizing the rows]
+target_label = target
+[Dataset size]
+number of data instances (rows) = 264 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 195]
+73.864%
+[class: 1  #elements = 69]
+26.136%
+
+[training set = 80%]
+[test set = 20%]
+[Creating the training set and test set for the values]
+
+check
+[training set dimensions:  211  patients]
+[test set dimensions:  53  patients]
+[Creating the training set and test set for the labels "1"-"0"]
+[Dataset size]
+number of data instances (rows) = 211 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 104]
+49.289%
+[class: 1  #elements = 107]
+50.711%
+
+
+[Training the random forest classifier on the training set]
+
+[Applying the trained random forest classifier on the test set]
+
+PR AUC (integral) 	0.6459127
+ROC AUC 		0.7956081
+
+Brier score =  NA  (best value: 0; worst value: 1)
+
+TOTAL:
+
+ FN =  1  /  16 	 (truth == 1) & (prediction < threshold)
+ TP =  15  /  16 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  24  /  37 	 (truth == 0) & (prediction >= threshold)
+ TN =  13  /  37 	 (truth == 0) & (prediction < threshold)
+
+
+
+ @@@ Test set @@@ 	MCC 	 F1_score 	accuracy 	TP_rate 	TN_rate 	PPV 		NPV 		PR AUC 	ROC AUC
+@@@ Test set @@@      0.301 	 0.545 	 	0.528 	 	0.938 	 	0.351		0.385	 	0.929	 	0.646	0.796
+
+[Execlution number 27 out of 100]
+[Randomizing the rows]
+target_label = target
+[Dataset size]
+number of data instances (rows) = 264 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 195]
+73.864%
+[class: 1  #elements = 69]
+26.136%
+
+[training set = 80%]
+[test set = 20%]
+[Creating the training set and test set for the values]
+
+check
+[training set dimensions:  211  patients]
+[test set dimensions:  53  patients]
+[Creating the training set and test set for the labels "1"-"0"]
+[Dataset size]
+number of data instances (rows) = 211 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 104]
+49.289%
+[class: 1  #elements = 107]
+50.711%
+
+
+[Training the random forest classifier on the training set]
+
+[Applying the trained random forest classifier on the test set]
+
+PR AUC (integral) 	0.6822599
+ROC AUC 		0.8534799
+
+Brier score =  NA  (best value: 0; worst value: 1)
+
+TOTAL:
+
+ FN =  3  /  14 	 (truth == 1) & (prediction < threshold)
+ TP =  11  /  14 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  10  /  39 	 (truth == 0) & (prediction >= threshold)
+ TN =  29  /  39 	 (truth == 0) & (prediction < threshold)
+
+
+
+ @@@ Test set @@@ 	MCC 	 F1_score 	accuracy 	TP_rate 	TN_rate 	PPV 		NPV 		PR AUC 	ROC AUC
+@@@ Test set @@@      0.477 	 0.629 	 	0.755 	 	0.786 	 	0.744		0.524	 	0.906	 	0.682	0.853
+
+[Execlution number 28 out of 100]
+[Randomizing the rows]
+target_label = target
+[Dataset size]
+number of data instances (rows) = 264 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 195]
+73.864%
+[class: 1  #elements = 69]
+26.136%
+
+[training set = 80%]
+[test set = 20%]
+[Creating the training set and test set for the values]
+
+check
+[training set dimensions:  211  patients]
+[test set dimensions:  53  patients]
+[Creating the training set and test set for the labels "1"-"0"]
+[Dataset size]
+number of data instances (rows) = 211 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 104]
+49.289%
+[class: 1  #elements = 107]
+50.711%
+
+
+[Training the random forest classifier on the training set]
+
+[Applying the trained random forest classifier on the test set]
+
+PR AUC (integral) 	0.6719616
+ROC AUC 		0.8855311
+
+Brier score =  NA  (best value: 0; worst value: 1)
+
+TOTAL:
+
+ FN =  1  /  14 	 (truth == 1) & (prediction < threshold)
+ TP =  13  /  14 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  11  /  39 	 (truth == 0) & (prediction >= threshold)
+ TN =  28  /  39 	 (truth == 0) & (prediction < threshold)
+
+
+
+ @@@ Test set @@@ 	MCC 	 F1_score 	accuracy 	TP_rate 	TN_rate 	PPV 		NPV 		PR AUC 	ROC AUC
+@@@ Test set @@@      0.573 	 0.684 	 	0.774 	 	0.929 	 	0.718		0.542	 	0.966	 	0.672	0.886
+
+[Execlution number 29 out of 100]
+[Randomizing the rows]
+target_label = target
+[Dataset size]
+number of data instances (rows) = 264 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 195]
+73.864%
+[class: 1  #elements = 69]
+26.136%
+
+[training set = 80%]
+[test set = 20%]
+[Creating the training set and test set for the values]
+
+check
+[training set dimensions:  211  patients]
+[test set dimensions:  53  patients]
+[Creating the training set and test set for the labels "1"-"0"]
+[Dataset size]
+number of data instances (rows) = 211 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 104]
+49.289%
+[class: 1  #elements = 107]
+50.711%
+
+
+[Training the random forest classifier on the training set]
+
+[Applying the trained random forest classifier on the test set]
+
+PR AUC (integral) 	0.7751945
+ROC AUC 		0.8531746
+
+Brier score =  NA  (best value: 0; worst value: 1)
+
+TOTAL:
+
+ FN =  1  /  18 	 (truth == 1) & (prediction < threshold)
+ TP =  17  /  18 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  22  /  35 	 (truth == 0) & (prediction >= threshold)
+ TN =  13  /  35 	 (truth == 0) & (prediction < threshold)
+
+
+
+ @@@ Test set @@@ 	MCC 	 F1_score 	accuracy 	TP_rate 	TN_rate 	PPV 		NPV 		PR AUC 	ROC AUC
+@@@ Test set @@@      0.339 	 0.596 	 	0.566 	 	0.944 	 	0.371		0.436	 	0.929	 	0.775	0.853
+
+[Execlution number 30 out of 100]
+[Randomizing the rows]
+target_label = target
+[Dataset size]
+number of data instances (rows) = 264 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 195]
+73.864%
+[class: 1  #elements = 69]
+26.136%
+
+[training set = 80%]
+[test set = 20%]
+[Creating the training set and test set for the values]
+
+check
+[training set dimensions:  211  patients]
+[test set dimensions:  53  patients]
+[Creating the training set and test set for the labels "1"-"0"]
+[Dataset size]
+number of data instances (rows) = 211 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 104]
+49.289%
+[class: 1  #elements = 107]
+50.711%
+
+
+[Training the random forest classifier on the training set]
+
+[Applying the trained random forest classifier on the test set]
+
+PR AUC (integral) 	0.7927146
+ROC AUC 		0.8255814
+
+Brier score =  NA  (best value: 0; worst value: 1)
+
+TOTAL:
+
+ FN =  2  /  10 	 (truth == 1) & (prediction < threshold)
+ TP =  8  /  10 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  13  /  43 	 (truth == 0) & (prediction >= threshold)
+ TN =  30  /  43 	 (truth == 0) & (prediction < threshold)
+
+
+
+ @@@ Test set @@@ 	MCC 	 F1_score 	accuracy 	TP_rate 	TN_rate 	PPV 		NPV 		PR AUC 	ROC AUC
+@@@ Test set @@@      0.398 	 0.516 	 	0.717 	 	0.800 	 	0.698		0.381	 	0.938	 	0.793	0.826
+
+[Execlution number 31 out of 100]
+[Randomizing the rows]
+target_label = target
+[Dataset size]
+number of data instances (rows) = 264 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 195]
+73.864%
+[class: 1  #elements = 69]
+26.136%
+
+[training set = 80%]
+[test set = 20%]
+[Creating the training set and test set for the values]
+
+check
+[training set dimensions:  211  patients]
+[test set dimensions:  53  patients]
+[Creating the training set and test set for the labels "1"-"0"]
+[Dataset size]
+number of data instances (rows) = 211 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 104]
+49.289%
+[class: 1  #elements = 107]
+50.711%
+
+
+[Training the random forest classifier on the training set]
+
+[Applying the trained random forest classifier on the test set]
+
+PR AUC (integral) 	0.7622422
+ROC AUC 		0.8846154
+
+Brier score =  NA  (best value: 0; worst value: 1)
+
+TOTAL:
+
+ FN =  1  /  13 	 (truth == 1) & (prediction < threshold)
+ TP =  12  /  13 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  12  /  40 	 (truth == 0) & (prediction >= threshold)
+ TN =  28  /  40 	 (truth == 0) & (prediction < threshold)
+
+
+
+ @@@ Test set @@@ 	MCC 	 F1_score 	accuracy 	TP_rate 	TN_rate 	PPV 		NPV 		PR AUC 	ROC AUC
+@@@ Test set @@@      0.539 	 0.649 	 	0.755 	 	0.923 	 	0.700		0.500	 	0.966	 	0.762	0.885
+
+[Execlution number 32 out of 100]
+[Randomizing the rows]
+target_label = target
+[Dataset size]
+number of data instances (rows) = 264 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 195]
+73.864%
+[class: 1  #elements = 69]
+26.136%
+
+[training set = 80%]
+[test set = 20%]
+[Creating the training set and test set for the values]
+
+check
+[training set dimensions:  211  patients]
+[test set dimensions:  53  patients]
+[Creating the training set and test set for the labels "1"-"0"]
+[Dataset size]
+number of data instances (rows) = 211 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 104]
+49.289%
+[class: 1  #elements = 107]
+50.711%
+
+
+[Training the random forest classifier on the training set]
+
+[Applying the trained random forest classifier on the test set]
+
+PR AUC (integral) 	0.7971934
+ROC AUC 		0.8351648
+
+Brier score =  NA  (best value: 0; worst value: 1)
+
+TOTAL:
+
+ FN =  2  /  14 	 (truth == 1) & (prediction < threshold)
+ TP =  12  /  14 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  8  /  39 	 (truth == 0) & (prediction >= threshold)
+ TN =  31  /  39 	 (truth == 0) & (prediction < threshold)
+
+
+
+ @@@ Test set @@@ 	MCC 	 F1_score 	accuracy 	TP_rate 	TN_rate 	PPV 		NPV 		PR AUC 	ROC AUC
+@@@ Test set @@@      0.593 	 0.706 	 	0.811 	 	0.857 	 	0.795		0.600	 	0.939	 	0.797	0.835
+
+[Execlution number 33 out of 100]
+[Randomizing the rows]
+target_label = target
+[Dataset size]
+number of data instances (rows) = 264 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 195]
+73.864%
+[class: 1  #elements = 69]
+26.136%
+
+[training set = 80%]
+[test set = 20%]
+[Creating the training set and test set for the values]
+
+check
+[training set dimensions:  211  patients]
+[test set dimensions:  53  patients]
+[Creating the training set and test set for the labels "1"-"0"]
+[Dataset size]
+number of data instances (rows) = 211 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 104]
+49.289%
+[class: 1  #elements = 107]
+50.711%
+
+
+[Training the random forest classifier on the training set]
+
+[Applying the trained random forest classifier on the test set]
+
+PR AUC (integral) 	0.6436551
+ROC AUC 		0.8095238
+
+Brier score =  NA  (best value: 0; worst value: 1)
+
+TOTAL:
+
+ FN =  1  /  11 	 (truth == 1) & (prediction < threshold)
+ TP =  10  /  11 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  16  /  42 	 (truth == 0) & (prediction >= threshold)
+ TN =  26  /  42 	 (truth == 0) & (prediction < threshold)
+
+
+
+ @@@ Test set @@@ 	MCC 	 F1_score 	accuracy 	TP_rate 	TN_rate 	PPV 		NPV 		PR AUC 	ROC AUC
+@@@ Test set @@@      0.428 	 0.541 	 	0.679 	 	0.909 	 	0.619		0.385	 	0.963	 	0.644	0.810
+
+[Execlution number 34 out of 100]
+[Randomizing the rows]
+target_label = target
+[Dataset size]
+number of data instances (rows) = 264 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 195]
+73.864%
+[class: 1  #elements = 69]
+26.136%
+
+[training set = 80%]
+[test set = 20%]
+[Creating the training set and test set for the values]
+
+check
+[training set dimensions:  211  patients]
+[test set dimensions:  53  patients]
+[Creating the training set and test set for the labels "1"-"0"]
+[Dataset size]
+number of data instances (rows) = 211 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 104]
+49.289%
+[class: 1  #elements = 107]
+50.711%
+
+
+[Training the random forest classifier on the training set]
+
+[Applying the trained random forest classifier on the test set]
+
+PR AUC (integral) 	0.7803518
+ROC AUC 		0.9054054
+
+Brier score =  NA  (best value: 0; worst value: 1)
+
+TOTAL:
+
+ FN =  2  /  16 	 (truth == 1) & (prediction < threshold)
+ TP =  14  /  16 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  10  /  37 	 (truth == 0) & (prediction >= threshold)
+ TN =  27  /  37 	 (truth == 0) & (prediction < threshold)
+
+
+
+ @@@ Test set @@@ 	MCC 	 F1_score 	accuracy 	TP_rate 	TN_rate 	PPV 		NPV 		PR AUC 	ROC AUC
+@@@ Test set @@@      0.558 	 0.700 	 	0.774 	 	0.875 	 	0.730		0.583	 	0.931	 	0.780	0.905
+
+[Execlution number 35 out of 100]
+[Randomizing the rows]
+target_label = target
+[Dataset size]
+number of data instances (rows) = 264 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 195]
+73.864%
+[class: 1  #elements = 69]
+26.136%
+
+[training set = 80%]
+[test set = 20%]
+[Creating the training set and test set for the values]
+
+check
+[training set dimensions:  211  patients]
+[test set dimensions:  53  patients]
+[Creating the training set and test set for the labels "1"-"0"]
+[Dataset size]
+number of data instances (rows) = 211 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 104]
+49.289%
+[class: 1  #elements = 107]
+50.711%
+
+
+[Training the random forest classifier on the training set]
+
+[Applying the trained random forest classifier on the test set]
+
+PR AUC (integral) 	0.69616
+ROC AUC 		0.8343496
+
+Brier score =  NA  (best value: 0; worst value: 1)
+
+TOTAL:
+
+ FN =  4  /  12 	 (truth == 1) & (prediction < threshold)
+ TP =  8  /  12 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  7  /  41 	 (truth == 0) & (prediction >= threshold)
+ TN =  34  /  41 	 (truth == 0) & (prediction < threshold)
+
+
+
+ @@@ Test set @@@ 	MCC 	 F1_score 	accuracy 	TP_rate 	TN_rate 	PPV 		NPV 		PR AUC 	ROC AUC
+@@@ Test set @@@      0.461 	 0.593 	 	0.792 	 	0.667 	 	0.829		0.533	 	0.895	 	0.696	0.834
+
+[Execlution number 36 out of 100]
+[Randomizing the rows]
+target_label = target
+[Dataset size]
+number of data instances (rows) = 264 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 195]
+73.864%
+[class: 1  #elements = 69]
+26.136%
+
+[training set = 80%]
+[test set = 20%]
+[Creating the training set and test set for the values]
+
+check
+[training set dimensions:  211  patients]
+[test set dimensions:  53  patients]
+[Creating the training set and test set for the labels "1"-"0"]
+[Dataset size]
+number of data instances (rows) = 211 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 104]
+49.289%
+[class: 1  #elements = 107]
+50.711%
+
+
+[Training the random forest classifier on the training set]
+
+[Applying the trained random forest classifier on the test set]
+
+PR AUC (integral) 	0.7538029
+ROC AUC 		0.8884615
+
+Brier score =  NA  (best value: 0; worst value: 1)
+
+TOTAL:
+
+ FN =  3  /  13 	 (truth == 1) & (prediction < threshold)
+ TP =  10  /  13 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  5  /  40 	 (truth == 0) & (prediction >= threshold)
+ TN =  35  /  40 	 (truth == 0) & (prediction < threshold)
+
+
+
+ @@@ Test set @@@ 	MCC 	 F1_score 	accuracy 	TP_rate 	TN_rate 	PPV 		NPV 		PR AUC 	ROC AUC
+@@@ Test set @@@      0.615 	 0.714 	 	0.849 	 	0.769 	 	0.875		0.667	 	0.921	 	0.754	0.888
+
+[Execlution number 37 out of 100]
+[Randomizing the rows]
+target_label = target
+[Dataset size]
+number of data instances (rows) = 264 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 195]
+73.864%
+[class: 1  #elements = 69]
+26.136%
+
+[training set = 80%]
+[test set = 20%]
+[Creating the training set and test set for the values]
+
+check
+[training set dimensions:  211  patients]
+[test set dimensions:  53  patients]
+[Creating the training set and test set for the labels "1"-"0"]
+[Dataset size]
+number of data instances (rows) = 211 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 104]
+49.289%
+[class: 1  #elements = 107]
+50.711%
+
+
+[Training the random forest classifier on the training set]
+
+[Applying the trained random forest classifier on the test set]
+
+PR AUC (integral) 	0.6723301
+ROC AUC 		0.8280702
+
+Brier score =  NA  (best value: 0; worst value: 1)
+
+TOTAL:
+
+ FN =  3  /  15 	 (truth == 1) & (prediction < threshold)
+ TP =  12  /  15 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  12  /  38 	 (truth == 0) & (prediction >= threshold)
+ TN =  26  /  38 	 (truth == 0) & (prediction < threshold)
+
+
+
+ @@@ Test set @@@ 	MCC 	 F1_score 	accuracy 	TP_rate 	TN_rate 	PPV 		NPV 		PR AUC 	ROC AUC
+@@@ Test set @@@      0.438 	 0.615 	 	0.717 	 	0.800 	 	0.684		0.500	 	0.897	 	0.672	0.828
+
+[Execlution number 38 out of 100]
+[Randomizing the rows]
+target_label = target
+[Dataset size]
+number of data instances (rows) = 264 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 195]
+73.864%
+[class: 1  #elements = 69]
+26.136%
+
+[training set = 80%]
+[test set = 20%]
+[Creating the training set and test set for the values]
+
+check
+[training set dimensions:  211  patients]
+[test set dimensions:  53  patients]
+[Creating the training set and test set for the labels "1"-"0"]
+[Dataset size]
+number of data instances (rows) = 211 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 104]
+49.289%
+[class: 1  #elements = 107]
+50.711%
+
+
+[Training the random forest classifier on the training set]
+
+[Applying the trained random forest classifier on the test set]
+
+PR AUC (integral) 	0.4446806
+ROC AUC 		0.7638889
+
+Brier score =  NA  (best value: 0; worst value: 1)
+
+TOTAL:
+
+ FN =  2  /  8 	 (truth == 1) & (prediction < threshold)
+ TP =  6  /  8 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  11  /  45 	 (truth == 0) & (prediction >= threshold)
+ TN =  34  /  45 	 (truth == 0) & (prediction < threshold)
+
+
+
+ @@@ Test set @@@ 	MCC 	 F1_score 	accuracy 	TP_rate 	TN_rate 	PPV 		NPV 		PR AUC 	ROC AUC
+@@@ Test set @@@      0.388 	 0.480 	 	0.755 	 	0.750 	 	0.756		0.353	 	0.944	 	0.445	0.764
+
+[Execlution number 39 out of 100]
+[Randomizing the rows]
+target_label = target
+[Dataset size]
+number of data instances (rows) = 264 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 195]
+73.864%
+[class: 1  #elements = 69]
+26.136%
+
+[training set = 80%]
+[test set = 20%]
+[Creating the training set and test set for the values]
+
+check
+[training set dimensions:  211  patients]
+[test set dimensions:  53  patients]
+[Creating the training set and test set for the labels "1"-"0"]
+[Dataset size]
+number of data instances (rows) = 211 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 104]
+49.289%
+[class: 1  #elements = 107]
+50.711%
+
+
+[Training the random forest classifier on the training set]
+
+[Applying the trained random forest classifier on the test set]
+
+PR AUC (integral) 	0.7816809
+ROC AUC 		0.8663462
+
+Brier score =  NA  (best value: 0; worst value: 1)
+
+TOTAL:
+
+ FN =  1  /  13 	 (truth == 1) & (prediction < threshold)
+ TP =  12  /  13 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  19  /  40 	 (truth == 0) & (prediction >= threshold)
+ TN =  21  /  40 	 (truth == 0) & (prediction < threshold)
+
+
+
+ @@@ Test set @@@ 	MCC 	 F1_score 	accuracy 	TP_rate 	TN_rate 	PPV 		NPV 		PR AUC 	ROC AUC
+@@@ Test set @@@      0.391 	 0.545 	 	0.623 	 	0.923 	 	0.525		0.387	 	0.955	 	0.782	0.866
+
+[Execlution number 40 out of 100]
+[Randomizing the rows]
+target_label = target
+[Dataset size]
+number of data instances (rows) = 264 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 195]
+73.864%
+[class: 1  #elements = 69]
+26.136%
+
+[training set = 80%]
+[test set = 20%]
+[Creating the training set and test set for the values]
+
+check
+[training set dimensions:  211  patients]
+[test set dimensions:  53  patients]
+[Creating the training set and test set for the labels "1"-"0"]
+[Dataset size]
+number of data instances (rows) = 211 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 104]
+49.289%
+[class: 1  #elements = 107]
+50.711%
+
+
+[Training the random forest classifier on the training set]
+
+[Applying the trained random forest classifier on the test set]
+
+PR AUC (integral) 	0.6801667
+ROC AUC 		0.8368421
+
+Brier score =  NA  (best value: 0; worst value: 1)
+
+TOTAL:
+
+ FN =  2  /  15 	 (truth == 1) & (prediction < threshold)
+ TP =  13  /  15 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  15  /  38 	 (truth == 0) & (prediction >= threshold)
+ TN =  23  /  38 	 (truth == 0) & (prediction < threshold)
+
+
+
+ @@@ Test set @@@ 	MCC 	 F1_score 	accuracy 	TP_rate 	TN_rate 	PPV 		NPV 		PR AUC 	ROC AUC
+@@@ Test set @@@      0.426 	 0.605 	 	0.679 	 	0.867 	 	0.605		0.464	 	0.920	 	0.680	0.837
+
+[Execlution number 41 out of 100]
+[Randomizing the rows]
+target_label = target
+[Dataset size]
+number of data instances (rows) = 264 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 195]
+73.864%
+[class: 1  #elements = 69]
+26.136%
+
+[training set = 80%]
+[test set = 20%]
+[Creating the training set and test set for the values]
+
+check
+[training set dimensions:  211  patients]
+[test set dimensions:  53  patients]
+[Creating the training set and test set for the labels "1"-"0"]
+[Dataset size]
+number of data instances (rows) = 211 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 104]
+49.289%
+[class: 1  #elements = 107]
+50.711%
+
+
+[Training the random forest classifier on the training set]
+
+[Applying the trained random forest classifier on the test set]
+
+PR AUC (integral) 	0.6632745
+ROC AUC 		0.8169935
+
+Brier score =  NA  (best value: 0; worst value: 1)
+
+TOTAL:
+
+ FN =  4  /  17 	 (truth == 1) & (prediction < threshold)
+ TP =  13  /  17 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  9  /  36 	 (truth == 0) & (prediction >= threshold)
+ TN =  27  /  36 	 (truth == 0) & (prediction < threshold)
+
+
+
+ @@@ Test set @@@ 	MCC 	 F1_score 	accuracy 	TP_rate 	TN_rate 	PPV 		NPV 		PR AUC 	ROC AUC
+@@@ Test set @@@      0.488 	 0.667 	 	0.755 	 	0.765 	 	0.750		0.591	 	0.871	 	0.663	0.817
+
+[Execlution number 42 out of 100]
+[Randomizing the rows]
+target_label = target
+[Dataset size]
+number of data instances (rows) = 264 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 195]
+73.864%
+[class: 1  #elements = 69]
+26.136%
+
+[training set = 80%]
+[test set = 20%]
+[Creating the training set and test set for the values]
+
+check
+[training set dimensions:  211  patients]
+[test set dimensions:  53  patients]
+[Creating the training set and test set for the labels "1"-"0"]
+[Dataset size]
+number of data instances (rows) = 211 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 104]
+49.289%
+[class: 1  #elements = 107]
+50.711%
+
+
+[Training the random forest classifier on the training set]
+
+[Applying the trained random forest classifier on the test set]
+
+PR AUC (integral) 	0.6144557
+ROC AUC 		0.8740385
+
+Brier score =  NA  (best value: 0; worst value: 1)
+
+TOTAL:
+
+ FN =  1  /  13 	 (truth == 1) & (prediction < threshold)
+ TP =  12  /  13 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  14  /  40 	 (truth == 0) & (prediction >= threshold)
+ TN =  26  /  40 	 (truth == 0) & (prediction < threshold)
+
+
+
+ @@@ Test set @@@ 	MCC 	 F1_score 	accuracy 	TP_rate 	TN_rate 	PPV 		NPV 		PR AUC 	ROC AUC
+@@@ Test set @@@      0.493 	 0.615 	 	0.717 	 	0.923 	 	0.650		0.462	 	0.963	 	0.614	0.874
+
+[Execlution number 43 out of 100]
+[Randomizing the rows]
+target_label = target
+[Dataset size]
+number of data instances (rows) = 264 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 195]
+73.864%
+[class: 1  #elements = 69]
+26.136%
+
+[training set = 80%]
+[test set = 20%]
+[Creating the training set and test set for the values]
+
+check
+[training set dimensions:  211  patients]
+[test set dimensions:  53  patients]
+[Creating the training set and test set for the labels "1"-"0"]
+[Dataset size]
+number of data instances (rows) = 211 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 104]
+49.289%
+[class: 1  #elements = 107]
+50.711%
+
+
+[Training the random forest classifier on the training set]
+
+[Applying the trained random forest classifier on the test set]
+
+PR AUC (integral) 	0.7623775
+ROC AUC 		0.8343496
+
+Brier score =  NA  (best value: 0; worst value: 1)
+
+TOTAL:
+
+ FN =  2  /  12 	 (truth == 1) & (prediction < threshold)
+ TP =  10  /  12 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  21  /  41 	 (truth == 0) & (prediction >= threshold)
+ TN =  20  /  41 	 (truth == 0) & (prediction < threshold)
+
+
+
+ @@@ Test set @@@ 	MCC 	 F1_score 	accuracy 	TP_rate 	TN_rate 	PPV 		NPV 		PR AUC 	ROC AUC
+@@@ Test set @@@      0.273 	 0.465 	 	0.566 	 	0.833 	 	0.488		0.323	 	0.909	 	0.762	0.834
+
+[Execlution number 44 out of 100]
+[Randomizing the rows]
+target_label = target
+[Dataset size]
+number of data instances (rows) = 264 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 195]
+73.864%
+[class: 1  #elements = 69]
+26.136%
+
+[training set = 80%]
+[test set = 20%]
+[Creating the training set and test set for the values]
+
+check
+[training set dimensions:  211  patients]
+[test set dimensions:  53  patients]
+[Creating the training set and test set for the labels "1"-"0"]
+[Dataset size]
+number of data instances (rows) = 211 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 104]
+49.289%
+[class: 1  #elements = 107]
+50.711%
+
+
+[Training the random forest classifier on the training set]
+
+[Applying the trained random forest classifier on the test set]
+
+PR AUC (integral) 	0.8526037
+ROC AUC 		0.9052288
+
+Brier score =  NA  (best value: 0; worst value: 1)
+
+TOTAL:
+
+ FN =  1  /  17 	 (truth == 1) & (prediction < threshold)
+ TP =  16  /  17 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  10  /  36 	 (truth == 0) & (prediction >= threshold)
+ TN =  26  /  36 	 (truth == 0) & (prediction < threshold)
+
+
+
+ @@@ Test set @@@ 	MCC 	 F1_score 	accuracy 	TP_rate 	TN_rate 	PPV 		NPV 		PR AUC 	ROC AUC
+@@@ Test set @@@      0.619 	 0.744 	 	0.792 	 	0.941 	 	0.722		0.615	 	0.963	 	0.853	0.905
+
+[Execlution number 45 out of 100]
+[Randomizing the rows]
+target_label = target
+[Dataset size]
+number of data instances (rows) = 264 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 195]
+73.864%
+[class: 1  #elements = 69]
+26.136%
+
+[training set = 80%]
+[test set = 20%]
+[Creating the training set and test set for the values]
+
+check
+[training set dimensions:  211  patients]
+[test set dimensions:  53  patients]
+[Creating the training set and test set for the labels "1"-"0"]
+[Dataset size]
+number of data instances (rows) = 211 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 104]
+49.289%
+[class: 1  #elements = 107]
+50.711%
+
+
+[Training the random forest classifier on the training set]
+
+[Applying the trained random forest classifier on the test set]
+
+PR AUC (integral) 	0.6621284
+ROC AUC 		0.8538462
+
+Brier score =  NA  (best value: 0; worst value: 1)
+
+TOTAL:
+
+ FN =  3  /  13 	 (truth == 1) & (prediction < threshold)
+ TP =  10  /  13 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  6  /  40 	 (truth == 0) & (prediction >= threshold)
+ TN =  34  /  40 	 (truth == 0) & (prediction < threshold)
+
+
+
+ @@@ Test set @@@ 	MCC 	 F1_score 	accuracy 	TP_rate 	TN_rate 	PPV 		NPV 		PR AUC 	ROC AUC
+@@@ Test set @@@      0.580 	 0.690 	 	0.830 	 	0.769 	 	0.850		0.625	 	0.919	 	0.662	0.854
+
+[Execlution number 46 out of 100]
+[Randomizing the rows]
+target_label = target
+[Dataset size]
+number of data instances (rows) = 264 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 195]
+73.864%
+[class: 1  #elements = 69]
+26.136%
+
+[training set = 80%]
+[test set = 20%]
+[Creating the training set and test set for the values]
+
+check
+[training set dimensions:  211  patients]
+[test set dimensions:  53  patients]
+[Creating the training set and test set for the labels "1"-"0"]
+[Dataset size]
+number of data instances (rows) = 211 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 104]
+49.289%
+[class: 1  #elements = 107]
+50.711%
+
+
+[Training the random forest classifier on the training set]
+
+[Applying the trained random forest classifier on the test set]
+
+PR AUC (integral) 	0.8293633
+ROC AUC 		0.8596491
+
+Brier score =  NA  (best value: 0; worst value: 1)
+
+TOTAL:
+
+ FN =  2  /  15 	 (truth == 1) & (prediction < threshold)
+ TP =  13  /  15 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  12  /  38 	 (truth == 0) & (prediction >= threshold)
+ TN =  26  /  38 	 (truth == 0) & (prediction < threshold)
+
+
+
+ @@@ Test set @@@ 	MCC 	 F1_score 	accuracy 	TP_rate 	TN_rate 	PPV 		NPV 		PR AUC 	ROC AUC
+@@@ Test set @@@      0.497 	 0.650 	 	0.736 	 	0.867 	 	0.684		0.520	 	0.929	 	0.829	0.860
+
+[Execlution number 47 out of 100]
+[Randomizing the rows]
+target_label = target
+[Dataset size]
+number of data instances (rows) = 264 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 195]
+73.864%
+[class: 1  #elements = 69]
+26.136%
+
+[training set = 80%]
+[test set = 20%]
+[Creating the training set and test set for the values]
+
+check
+[training set dimensions:  211  patients]
+[test set dimensions:  53  patients]
+[Creating the training set and test set for the labels "1"-"0"]
+[Dataset size]
+number of data instances (rows) = 211 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 104]
+49.289%
+[class: 1  #elements = 107]
+50.711%
+
+
+[Training the random forest classifier on the training set]
+
+[Applying the trained random forest classifier on the test set]
+
+PR AUC (integral) 	0.643275
+ROC AUC 		0.8388278
+
+Brier score =  NA  (best value: 0; worst value: 1)
+
+TOTAL:
+
+ FN =  3  /  14 	 (truth == 1) & (prediction < threshold)
+ TP =  11  /  14 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  7  /  39 	 (truth == 0) & (prediction >= threshold)
+ TN =  32  /  39 	 (truth == 0) & (prediction < threshold)
+
+
+
+ @@@ Test set @@@ 	MCC 	 F1_score 	accuracy 	TP_rate 	TN_rate 	PPV 		NPV 		PR AUC 	ROC AUC
+@@@ Test set @@@      0.564 	 0.688 	 	0.811 	 	0.786 	 	0.821		0.611	 	0.914	 	0.643	0.839
+
+[Execlution number 48 out of 100]
+[Randomizing the rows]
+target_label = target
+[Dataset size]
+number of data instances (rows) = 264 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 195]
+73.864%
+[class: 1  #elements = 69]
+26.136%
+
+[training set = 80%]
+[test set = 20%]
+[Creating the training set and test set for the values]
+
+check
+[training set dimensions:  211  patients]
+[test set dimensions:  53  patients]
+[Creating the training set and test set for the labels "1"-"0"]
+[Dataset size]
+number of data instances (rows) = 211 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 104]
+49.289%
+[class: 1  #elements = 107]
+50.711%
+
+
+[Training the random forest classifier on the training set]
+
+[Applying the trained random forest classifier on the test set]
+
+PR AUC (integral) 	0.7837783
+ROC AUC 		0.8153595
+
+Brier score =  NA  (best value: 0; worst value: 1)
+
+TOTAL:
+
+ FN =  1  /  17 	 (truth == 1) & (prediction < threshold)
+ TP =  16  /  17 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  28  /  36 	 (truth == 0) & (prediction >= threshold)
+ TN =  8  /  36 	 (truth == 0) & (prediction < threshold)
+
+
+
+ @@@ Test set @@@ 	MCC 	 F1_score 	accuracy 	TP_rate 	TN_rate 	PPV 		NPV 		PR AUC 	ROC AUC
+@@@ Test set @@@      0.203 	 0.525 	 	0.453 	 	0.941 	 	0.222		0.364	 	0.889	 	0.784	0.815
+
+[Execlution number 49 out of 100]
+[Randomizing the rows]
+target_label = target
+[Dataset size]
+number of data instances (rows) = 264 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 195]
+73.864%
+[class: 1  #elements = 69]
+26.136%
+
+[training set = 80%]
+[test set = 20%]
+[Creating the training set and test set for the values]
+
+check
+[training set dimensions:  211  patients]
+[test set dimensions:  53  patients]
+[Creating the training set and test set for the labels "1"-"0"]
+[Dataset size]
+number of data instances (rows) = 211 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 104]
+49.289%
+[class: 1  #elements = 107]
+50.711%
+
+
+[Training the random forest classifier on the training set]
+
+[Applying the trained random forest classifier on the test set]
+
+PR AUC (integral) 	0.7698
+ROC AUC 		0.9029304
+
+Brier score =  NA  (best value: 0; worst value: 1)
+
+TOTAL:
+
+ FN =  1  /  14 	 (truth == 1) & (prediction < threshold)
+ TP =  13  /  14 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  10  /  39 	 (truth == 0) & (prediction >= threshold)
+ TN =  29  /  39 	 (truth == 0) & (prediction < threshold)
+
+
+
+ @@@ Test set @@@ 	MCC 	 F1_score 	accuracy 	TP_rate 	TN_rate 	PPV 		NPV 		PR AUC 	ROC AUC
+@@@ Test set @@@      0.598 	 0.703 	 	0.792 	 	0.929 	 	0.744		0.565	 	0.967	 	0.770	0.903
+
+[Execlution number 50 out of 100]
+[Randomizing the rows]
+target_label = target
+[Dataset size]
+number of data instances (rows) = 264 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 195]
+73.864%
+[class: 1  #elements = 69]
+26.136%
+
+[training set = 80%]
+[test set = 20%]
+[Creating the training set and test set for the values]
+
+check
+[training set dimensions:  211  patients]
+[test set dimensions:  53  patients]
+[Creating the training set and test set for the labels "1"-"0"]
+[Dataset size]
+number of data instances (rows) = 211 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 104]
+49.289%
+[class: 1  #elements = 107]
+50.711%
+
+
+[Training the random forest classifier on the training set]
+
+[Applying the trained random forest classifier on the test set]
+
+PR AUC (integral) 	0.804212
+ROC AUC 		0.9476744
+
+Brier score =  NA  (best value: 0; worst value: 1)
+
+TOTAL:
+
+ FN =  0  /  10 	 (truth == 1) & (prediction < threshold)
+ TP =  10  /  10 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  19  /  43 	 (truth == 0) & (prediction >= threshold)
+ TN =  24  /  43 	 (truth == 0) & (prediction < threshold)
+
+
+
+ @@@ Test set @@@ 	MCC 	 F1_score 	accuracy 	TP_rate 	TN_rate 	PPV 		NPV 		PR AUC 	ROC AUC
+@@@ Test set @@@      0.439 	 0.513 	 	0.642 	 	1.000 	 	0.558		0.345	 	1.000	 	0.804	0.948
+
+[Execlution number 51 out of 100]
+[Randomizing the rows]
+target_label = target
+[Dataset size]
+number of data instances (rows) = 264 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 195]
+73.864%
+[class: 1  #elements = 69]
+26.136%
+
+[training set = 80%]
+[test set = 20%]
+[Creating the training set and test set for the values]
+
+check
+[training set dimensions:  211  patients]
+[test set dimensions:  53  patients]
+[Creating the training set and test set for the labels "1"-"0"]
+[Dataset size]
+number of data instances (rows) = 211 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 104]
+49.289%
+[class: 1  #elements = 107]
+50.711%
+
+
+[Training the random forest classifier on the training set]
+
+[Applying the trained random forest classifier on the test set]
+
+PR AUC (integral) 	0.8231624
+ROC AUC 		0.8745421
+
+Brier score =  NA  (best value: 0; worst value: 1)
+
+TOTAL:
+
+ FN =  2  /  14 	 (truth == 1) & (prediction < threshold)
+ TP =  12  /  14 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  11  /  39 	 (truth == 0) & (prediction >= threshold)
+ TN =  28  /  39 	 (truth == 0) & (prediction < threshold)
+
+
+
+ @@@ Test set @@@ 	MCC 	 F1_score 	accuracy 	TP_rate 	TN_rate 	PPV 		NPV 		PR AUC 	ROC AUC
+@@@ Test set @@@      0.512 	 0.649 	 	0.755 	 	0.857 	 	0.718		0.522	 	0.933	 	0.823	0.875
+
+[Execlution number 52 out of 100]
+[Randomizing the rows]
+target_label = target
+[Dataset size]
+number of data instances (rows) = 264 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 195]
+73.864%
+[class: 1  #elements = 69]
+26.136%
+
+[training set = 80%]
+[test set = 20%]
+[Creating the training set and test set for the values]
+
+check
+[training set dimensions:  211  patients]
+[test set dimensions:  53  patients]
+[Creating the training set and test set for the labels "1"-"0"]
+[Dataset size]
+number of data instances (rows) = 211 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 104]
+49.289%
+[class: 1  #elements = 107]
+50.711%
+
+
+[Training the random forest classifier on the training set]
+
+[Applying the trained random forest classifier on the test set]
+
+PR AUC (integral) 	0.7343943
+ROC AUC 		0.8149351
+
+Brier score =  NA  (best value: 0; worst value: 1)
+
+TOTAL:
+
+ FN =  2  /  11 	 (truth == 1) & (prediction < threshold)
+ TP =  9  /  11 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  18  /  42 	 (truth == 0) & (prediction >= threshold)
+ TN =  24  /  42 	 (truth == 0) & (prediction < threshold)
+
+
+
+ @@@ Test set @@@ 	MCC 	 F1_score 	accuracy 	TP_rate 	TN_rate 	PPV 		NPV 		PR AUC 	ROC AUC
+@@@ Test set @@@      0.316 	 0.474 	 	0.623 	 	0.818 	 	0.571		0.333	 	0.923	 	0.734	0.815
+
+[Execlution number 53 out of 100]
+[Randomizing the rows]
+target_label = target
+[Dataset size]
+number of data instances (rows) = 264 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 195]
+73.864%
+[class: 1  #elements = 69]
+26.136%
+
+[training set = 80%]
+[test set = 20%]
+[Creating the training set and test set for the values]
+
+check
+[training set dimensions:  211  patients]
+[test set dimensions:  53  patients]
+[Creating the training set and test set for the labels "1"-"0"]
+[Dataset size]
+number of data instances (rows) = 211 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 104]
+49.289%
+[class: 1  #elements = 107]
+50.711%
+
+
+[Training the random forest classifier on the training set]
+
+[Applying the trained random forest classifier on the test set]
+
+PR AUC (integral) 	0.5624993
+ROC AUC 		0.7857143
+
+Brier score =  NA  (best value: 0; worst value: 1)
+
+TOTAL:
+
+ FN =  2  /  14 	 (truth == 1) & (prediction < threshold)
+ TP =  12  /  14 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  23  /  39 	 (truth == 0) & (prediction >= threshold)
+ TN =  16  /  39 	 (truth == 0) & (prediction < threshold)
+
+
+
+ @@@ Test set @@@ 	MCC 	 F1_score 	accuracy 	TP_rate 	TN_rate 	PPV 		NPV 		PR AUC 	ROC AUC
+@@@ Test set @@@      0.249 	 0.490 	 	0.528 	 	0.857 	 	0.410		0.343	 	0.889	 	0.562	0.786
+
+[Execlution number 54 out of 100]
+[Randomizing the rows]
+target_label = target
+[Dataset size]
+number of data instances (rows) = 264 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 195]
+73.864%
+[class: 1  #elements = 69]
+26.136%
+
+[training set = 80%]
+[test set = 20%]
+[Creating the training set and test set for the values]
+
+check
+[training set dimensions:  211  patients]
+[test set dimensions:  53  patients]
+[Creating the training set and test set for the labels "1"-"0"]
+[Dataset size]
+number of data instances (rows) = 211 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 104]
+49.289%
+[class: 1  #elements = 107]
+50.711%
+
+
+[Training the random forest classifier on the training set]
+
+[Applying the trained random forest classifier on the test set]
+
+PR AUC (integral) 	0.6394432
+ROC AUC 		0.8607724
+
+Brier score =  NA  (best value: 0; worst value: 1)
+
+TOTAL:
+
+ FN =  1  /  12 	 (truth == 1) & (prediction < threshold)
+ TP =  11  /  12 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  18  /  41 	 (truth == 0) & (prediction >= threshold)
+ TN =  23  /  41 	 (truth == 0) & (prediction < threshold)
+
+
+
+ @@@ Test set @@@ 	MCC 	 F1_score 	accuracy 	TP_rate 	TN_rate 	PPV 		NPV 		PR AUC 	ROC AUC
+@@@ Test set @@@      0.402 	 0.537 	 	0.642 	 	0.917 	 	0.561		0.379	 	0.958	 	0.639	0.861
+
+[Execlution number 55 out of 100]
+[Randomizing the rows]
+target_label = target
+[Dataset size]
+number of data instances (rows) = 264 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 195]
+73.864%
+[class: 1  #elements = 69]
+26.136%
+
+[training set = 80%]
+[test set = 20%]
+[Creating the training set and test set for the values]
+
+check
+[training set dimensions:  211  patients]
+[test set dimensions:  53  patients]
+[Creating the training set and test set for the labels "1"-"0"]
+[Dataset size]
+number of data instances (rows) = 211 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 104]
+49.289%
+[class: 1  #elements = 107]
+50.711%
+
+
+[Training the random forest classifier on the training set]
+
+[Applying the trained random forest classifier on the test set]
+
+PR AUC (integral) 	0.8285915
+ROC AUC 		0.8815789
+
+Brier score =  NA  (best value: 0; worst value: 1)
+
+TOTAL:
+
+ FN =  1  /  15 	 (truth == 1) & (prediction < threshold)
+ TP =  14  /  15 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  24  /  38 	 (truth == 0) & (prediction >= threshold)
+ TN =  14  /  38 	 (truth == 0) & (prediction < threshold)
+
+
+
+ @@@ Test set @@@ 	MCC 	 F1_score 	accuracy 	TP_rate 	TN_rate 	PPV 		NPV 		PR AUC 	ROC AUC
+@@@ Test set @@@      0.302 	 0.528 	 	0.528 	 	0.933 	 	0.368		0.368	 	0.933	 	0.829	0.882
+
+[Execlution number 56 out of 100]
+[Randomizing the rows]
+target_label = target
+[Dataset size]
+number of data instances (rows) = 264 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 195]
+73.864%
+[class: 1  #elements = 69]
+26.136%
+
+[training set = 80%]
+[test set = 20%]
+[Creating the training set and test set for the values]
+
+check
+[training set dimensions:  211  patients]
+[test set dimensions:  53  patients]
+[Creating the training set and test set for the labels "1"-"0"]
+[Dataset size]
+number of data instances (rows) = 211 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 104]
+49.289%
+[class: 1  #elements = 107]
+50.711%
+
+
+[Training the random forest classifier on the training set]
+
+[Applying the trained random forest classifier on the test set]
+
+PR AUC (integral) 	0.8051078
+ROC AUC 		0.9273649
+
+Brier score =  NA  (best value: 0; worst value: 1)
+
+TOTAL:
+
+ FN =  1  /  16 	 (truth == 1) & (prediction < threshold)
+ TP =  15  /  16 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  9  /  37 	 (truth == 0) & (prediction >= threshold)
+ TN =  28  /  37 	 (truth == 0) & (prediction < threshold)
+
+
+
+ @@@ Test set @@@ 	MCC 	 F1_score 	accuracy 	TP_rate 	TN_rate 	PPV 		NPV 		PR AUC 	ROC AUC
+@@@ Test set @@@      0.640 	 0.750 	 	0.811 	 	0.938 	 	0.757		0.625	 	0.966	 	0.805	0.927
+
+[Execlution number 57 out of 100]
+[Randomizing the rows]
+target_label = target
+[Dataset size]
+number of data instances (rows) = 264 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 195]
+73.864%
+[class: 1  #elements = 69]
+26.136%
+
+[training set = 80%]
+[test set = 20%]
+[Creating the training set and test set for the values]
+
+check
+[training set dimensions:  211  patients]
+[test set dimensions:  53  patients]
+[Creating the training set and test set for the labels "1"-"0"]
+[Dataset size]
+number of data instances (rows) = 211 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 104]
+49.289%
+[class: 1  #elements = 107]
+50.711%
+
+
+[Training the random forest classifier on the training set]
+
+[Applying the trained random forest classifier on the test set]
+
+PR AUC (integral) 	0.7696945
+ROC AUC 		0.8317308
+
+Brier score =  NA  (best value: 0; worst value: 1)
+
+TOTAL:
+
+ FN =  3  /  13 	 (truth == 1) & (prediction < threshold)
+ TP =  10  /  13 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  6  /  40 	 (truth == 0) & (prediction >= threshold)
+ TN =  34  /  40 	 (truth == 0) & (prediction < threshold)
+
+
+
+ @@@ Test set @@@ 	MCC 	 F1_score 	accuracy 	TP_rate 	TN_rate 	PPV 		NPV 		PR AUC 	ROC AUC
+@@@ Test set @@@      0.580 	 0.690 	 	0.830 	 	0.769 	 	0.850		0.625	 	0.919	 	0.770	0.832
+
+[Execlution number 58 out of 100]
+[Randomizing the rows]
+target_label = target
+[Dataset size]
+number of data instances (rows) = 264 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 195]
+73.864%
+[class: 1  #elements = 69]
+26.136%
+
+[training set = 80%]
+[test set = 20%]
+[Creating the training set and test set for the values]
+
+check
+[training set dimensions:  211  patients]
+[test set dimensions:  53  patients]
+[Creating the training set and test set for the labels "1"-"0"]
+[Dataset size]
+number of data instances (rows) = 211 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 104]
+49.289%
+[class: 1  #elements = 107]
+50.711%
+
+
+[Training the random forest classifier on the training set]
+
+[Applying the trained random forest classifier on the test set]
+
+PR AUC (integral) 	0.8312003
+ROC AUC 		0.9122807
+
+Brier score =  NA  (best value: 0; worst value: 1)
+
+TOTAL:
+
+ FN =  1  /  15 	 (truth == 1) & (prediction < threshold)
+ TP =  14  /  15 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  13  /  38 	 (truth == 0) & (prediction >= threshold)
+ TN =  25  /  38 	 (truth == 0) & (prediction < threshold)
+
+
+
+ @@@ Test set @@@ 	MCC 	 F1_score 	accuracy 	TP_rate 	TN_rate 	PPV 		NPV 		PR AUC 	ROC AUC
+@@@ Test set @@@      0.533 	 0.667 	 	0.736 	 	0.933 	 	0.658		0.519	 	0.962	 	0.831	0.912
+
+[Execlution number 59 out of 100]
+[Randomizing the rows]
+target_label = target
+[Dataset size]
+number of data instances (rows) = 264 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 195]
+73.864%
+[class: 1  #elements = 69]
+26.136%
+
+[training set = 80%]
+[test set = 20%]
+[Creating the training set and test set for the values]
+
+check
+[training set dimensions:  211  patients]
+[test set dimensions:  53  patients]
+[Creating the training set and test set for the labels "1"-"0"]
+[Dataset size]
+number of data instances (rows) = 211 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 104]
+49.289%
+[class: 1  #elements = 107]
+50.711%
+
+
+[Training the random forest classifier on the training set]
+
+[Applying the trained random forest classifier on the test set]
+
+PR AUC (integral) 	0.6401063
+ROC AUC 		0.8498168
+
+Brier score =  NA  (best value: 0; worst value: 1)
+
+TOTAL:
+
+ FN =  1  /  14 	 (truth == 1) & (prediction < threshold)
+ TP =  13  /  14 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  14  /  39 	 (truth == 0) & (prediction >= threshold)
+ TN =  25  /  39 	 (truth == 0) & (prediction < threshold)
+
+
+
+ @@@ Test set @@@ 	MCC 	 F1_score 	accuracy 	TP_rate 	TN_rate 	PPV 		NPV 		PR AUC 	ROC AUC
+@@@ Test set @@@      0.502 	 0.634 	 	0.717 	 	0.929 	 	0.641		0.481	 	0.962	 	0.640	0.850
+
+[Execlution number 60 out of 100]
+[Randomizing the rows]
+target_label = target
+[Dataset size]
+number of data instances (rows) = 264 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 195]
+73.864%
+[class: 1  #elements = 69]
+26.136%
+
+[training set = 80%]
+[test set = 20%]
+[Creating the training set and test set for the values]
+
+check
+[training set dimensions:  211  patients]
+[test set dimensions:  53  patients]
+[Creating the training set and test set for the labels "1"-"0"]
+[Dataset size]
+number of data instances (rows) = 211 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 104]
+49.289%
+[class: 1  #elements = 107]
+50.711%
+
+
+[Training the random forest classifier on the training set]
+
+[Applying the trained random forest classifier on the test set]
+
+PR AUC (integral) 	0.7760073
+ROC AUC 		0.8787879
+
+Brier score =  NA  (best value: 0; worst value: 1)
+
+TOTAL:
+
+ FN =  3  /  11 	 (truth == 1) & (prediction < threshold)
+ TP =  8  /  11 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  4  /  42 	 (truth == 0) & (prediction >= threshold)
+ TN =  38  /  42 	 (truth == 0) & (prediction < threshold)
+
+
+
+ @@@ Test set @@@ 	MCC 	 F1_score 	accuracy 	TP_rate 	TN_rate 	PPV 		NPV 		PR AUC 	ROC AUC
+@@@ Test set @@@      0.612 	 0.696 	 	0.868 	 	0.727 	 	0.905		0.667	 	0.927	 	0.776	0.879
+
+[Execlution number 61 out of 100]
+[Randomizing the rows]
+target_label = target
+[Dataset size]
+number of data instances (rows) = 264 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 195]
+73.864%
+[class: 1  #elements = 69]
+26.136%
+
+[training set = 80%]
+[test set = 20%]
+[Creating the training set and test set for the values]
+
+check
+[training set dimensions:  211  patients]
+[test set dimensions:  53  patients]
+[Creating the training set and test set for the labels "1"-"0"]
+[Dataset size]
+number of data instances (rows) = 211 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 104]
+49.289%
+[class: 1  #elements = 107]
+50.711%
+
+
+[Training the random forest classifier on the training set]
+
+[Applying the trained random forest classifier on the test set]
+
+PR AUC (integral) 	0.7050959
+ROC AUC 		0.8305861
+
+Brier score =  NA  (best value: 0; worst value: 1)
+
+TOTAL:
+
+ FN =  2  /  14 	 (truth == 1) & (prediction < threshold)
+ TP =  12  /  14 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  22  /  39 	 (truth == 0) & (prediction >= threshold)
+ TN =  17  /  39 	 (truth == 0) & (prediction < threshold)
+
+
+
+ @@@ Test set @@@ 	MCC 	 F1_score 	accuracy 	TP_rate 	TN_rate 	PPV 		NPV 		PR AUC 	ROC AUC
+@@@ Test set @@@      0.269 	 0.500 	 	0.547 	 	0.857 	 	0.436		0.353	 	0.895	 	0.705	0.831
+
+[Execlution number 62 out of 100]
+[Randomizing the rows]
+target_label = target
+[Dataset size]
+number of data instances (rows) = 264 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 195]
+73.864%
+[class: 1  #elements = 69]
+26.136%
+
+[training set = 80%]
+[test set = 20%]
+[Creating the training set and test set for the values]
+
+check
+[training set dimensions:  211  patients]
+[test set dimensions:  53  patients]
+[Creating the training set and test set for the labels "1"-"0"]
+[Dataset size]
+number of data instances (rows) = 211 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 104]
+49.289%
+[class: 1  #elements = 107]
+50.711%
+
+
+[Training the random forest classifier on the training set]
+
+[Applying the trained random forest classifier on the test set]
+
+PR AUC (integral) 	0.789721
+ROC AUC 		0.8674603
+
+Brier score =  NA  (best value: 0; worst value: 1)
+
+TOTAL:
+
+ FN =  1  /  18 	 (truth == 1) & (prediction < threshold)
+ TP =  17  /  18 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  12  /  35 	 (truth == 0) & (prediction >= threshold)
+ TN =  23  /  35 	 (truth == 0) & (prediction < threshold)
+
+
+
+ @@@ Test set @@@ 	MCC 	 F1_score 	accuracy 	TP_rate 	TN_rate 	PPV 		NPV 		PR AUC 	ROC AUC
+@@@ Test set @@@      0.572 	 0.723 	 	0.755 	 	0.944 	 	0.657		0.586	 	0.958	 	0.790	0.867
+
+[Execlution number 63 out of 100]
+[Randomizing the rows]
+target_label = target
+[Dataset size]
+number of data instances (rows) = 264 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 195]
+73.864%
+[class: 1  #elements = 69]
+26.136%
+
+[training set = 80%]
+[test set = 20%]
+[Creating the training set and test set for the values]
+
+check
+[training set dimensions:  211  patients]
+[test set dimensions:  53  patients]
+[Creating the training set and test set for the labels "1"-"0"]
+[Dataset size]
+number of data instances (rows) = 211 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 104]
+49.289%
+[class: 1  #elements = 107]
+50.711%
+
+
+[Training the random forest classifier on the training set]
+
+[Applying the trained random forest classifier on the test set]
+
+PR AUC (integral) 	0.8653811
+ROC AUC 		0.9025974
+
+Brier score =  NA  (best value: 0; worst value: 1)
+
+TOTAL:
+
+ FN =  2  /  11 	 (truth == 1) & (prediction < threshold)
+ TP =  9  /  11 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  8  /  42 	 (truth == 0) & (prediction >= threshold)
+ TN =  34  /  42 	 (truth == 0) & (prediction < threshold)
+
+
+
+ @@@ Test set @@@ 	MCC 	 F1_score 	accuracy 	TP_rate 	TN_rate 	PPV 		NPV 		PR AUC 	ROC AUC
+@@@ Test set @@@      0.545 	 0.643 	 	0.811 	 	0.818 	 	0.810		0.529	 	0.944	 	0.865	0.903
+
+[Execlution number 64 out of 100]
+[Randomizing the rows]
+target_label = target
+[Dataset size]
+number of data instances (rows) = 264 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 195]
+73.864%
+[class: 1  #elements = 69]
+26.136%
+
+[training set = 80%]
+[test set = 20%]
+[Creating the training set and test set for the values]
+
+check
+[training set dimensions:  211  patients]
+[test set dimensions:  53  patients]
+[Creating the training set and test set for the labels "1"-"0"]
+[Dataset size]
+number of data instances (rows) = 211 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 104]
+49.289%
+[class: 1  #elements = 107]
+50.711%
+
+
+[Training the random forest classifier on the training set]
+
+[Applying the trained random forest classifier on the test set]
+
+PR AUC (integral) 	0.7149671
+ROC AUC 		0.8453488
+
+Brier score =  NA  (best value: 0; worst value: 1)
+
+TOTAL:
+
+ FN =  2  /  10 	 (truth == 1) & (prediction < threshold)
+ TP =  8  /  10 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  16  /  43 	 (truth == 0) & (prediction >= threshold)
+ TN =  27  /  43 	 (truth == 0) & (prediction < threshold)
+
+
+
+ @@@ Test set @@@ 	MCC 	 F1_score 	accuracy 	TP_rate 	TN_rate 	PPV 		NPV 		PR AUC 	ROC AUC
+@@@ Test set @@@      0.336 	 0.471 	 	0.660 	 	0.800 	 	0.628		0.333	 	0.931	 	0.715	0.845
+
+[Execlution number 65 out of 100]
+[Randomizing the rows]
+target_label = target
+[Dataset size]
+number of data instances (rows) = 264 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 195]
+73.864%
+[class: 1  #elements = 69]
+26.136%
+
+[training set = 80%]
+[test set = 20%]
+[Creating the training set and test set for the values]
+
+check
+[training set dimensions:  211  patients]
+[test set dimensions:  53  patients]
+[Creating the training set and test set for the labels "1"-"0"]
+[Dataset size]
+number of data instances (rows) = 211 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 104]
+49.289%
+[class: 1  #elements = 107]
+50.711%
+
+
+[Training the random forest classifier on the training set]
+
+[Applying the trained random forest classifier on the test set]
+
+PR AUC (integral) 	0.7987254
+ROC AUC 		0.8556911
+
+Brier score =  NA  (best value: 0; worst value: 1)
+
+TOTAL:
+
+ FN =  1  /  12 	 (truth == 1) & (prediction < threshold)
+ TP =  11  /  12 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  33  /  41 	 (truth == 0) & (prediction >= threshold)
+ TN =  8  /  41 	 (truth == 0) & (prediction < threshold)
+
+
+
+ @@@ Test set @@@ 	MCC 	 F1_score 	accuracy 	TP_rate 	TN_rate 	PPV 		NPV 		PR AUC 	ROC AUC
+@@@ Test set @@@      0.125 	 0.393 	 	0.358 	 	0.917 	 	0.195		0.250	 	0.889	 	0.799	0.856
+
+[Execlution number 66 out of 100]
+[Randomizing the rows]
+target_label = target
+[Dataset size]
+number of data instances (rows) = 264 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 195]
+73.864%
+[class: 1  #elements = 69]
+26.136%
+
+[training set = 80%]
+[test set = 20%]
+[Creating the training set and test set for the values]
+
+check
+[training set dimensions:  211  patients]
+[test set dimensions:  53  patients]
+[Creating the training set and test set for the labels "1"-"0"]
+[Dataset size]
+number of data instances (rows) = 211 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 104]
+49.289%
+[class: 1  #elements = 107]
+50.711%
+
+
+[Training the random forest classifier on the training set]
+
+[Applying the trained random forest classifier on the test set]
+
+PR AUC (integral) 	0.7179957
+ROC AUC 		0.8214286
+
+Brier score =  NA  (best value: 0; worst value: 1)
+
+TOTAL:
+
+ FN =  3  /  14 	 (truth == 1) & (prediction < threshold)
+ TP =  11  /  14 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  12  /  39 	 (truth == 0) & (prediction >= threshold)
+ TN =  27  /  39 	 (truth == 0) & (prediction < threshold)
+
+
+
+ @@@ Test set @@@ 	MCC 	 F1_score 	accuracy 	TP_rate 	TN_rate 	PPV 		NPV 		PR AUC 	ROC AUC
+@@@ Test set @@@      0.425 	 0.595 	 	0.717 	 	0.786 	 	0.692		0.478	 	0.900	 	0.718	0.821
+
+[Execlution number 67 out of 100]
+[Randomizing the rows]
+target_label = target
+[Dataset size]
+number of data instances (rows) = 264 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 195]
+73.864%
+[class: 1  #elements = 69]
+26.136%
+
+[training set = 80%]
+[test set = 20%]
+[Creating the training set and test set for the values]
+
+check
+[training set dimensions:  211  patients]
+[test set dimensions:  53  patients]
+[Creating the training set and test set for the labels "1"-"0"]
+[Dataset size]
+number of data instances (rows) = 211 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 104]
+49.289%
+[class: 1  #elements = 107]
+50.711%
+
+
+[Training the random forest classifier on the training set]
+
+[Applying the trained random forest classifier on the test set]
+
+PR AUC (integral) 	0.7993938
+ROC AUC 		0.875
+
+Brier score =  NA  (best value: 0; worst value: 1)
+
+TOTAL:
+
+ FN =  3  /  16 	 (truth == 1) & (prediction < threshold)
+ TP =  13  /  16 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  9  /  37 	 (truth == 0) & (prediction >= threshold)
+ TN =  28  /  37 	 (truth == 0) & (prediction < threshold)
+
+
+
+ @@@ Test set @@@ 	MCC 	 F1_score 	accuracy 	TP_rate 	TN_rate 	PPV 		NPV 		PR AUC 	ROC AUC
+@@@ Test set @@@      0.530 	 0.684 	 	0.774 	 	0.812 	 	0.757		0.591	 	0.903	 	0.799	0.875
+
+[Execlution number 68 out of 100]
+[Randomizing the rows]
+target_label = target
+[Dataset size]
+number of data instances (rows) = 264 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 195]
+73.864%
+[class: 1  #elements = 69]
+26.136%
+
+[training set = 80%]
+[test set = 20%]
+[Creating the training set and test set for the values]
+
+check
+[training set dimensions:  211  patients]
+[test set dimensions:  53  patients]
+[Creating the training set and test set for the labels "1"-"0"]
+[Dataset size]
+number of data instances (rows) = 211 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 104]
+49.289%
+[class: 1  #elements = 107]
+50.711%
+
+
+[Training the random forest classifier on the training set]
+
+[Applying the trained random forest classifier on the test set]
+
+PR AUC (integral) 	0.9193648
+ROC AUC 		0.9451014
+
+Brier score =  NA  (best value: 0; worst value: 1)
+
+TOTAL:
+
+ FN =  1  /  16 	 (truth == 1) & (prediction < threshold)
+ TP =  15  /  16 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  4  /  37 	 (truth == 0) & (prediction >= threshold)
+ TN =  33  /  37 	 (truth == 0) & (prediction < threshold)
+
+
+
+ @@@ Test set @@@ 	MCC 	 F1_score 	accuracy 	TP_rate 	TN_rate 	PPV 		NPV 		PR AUC 	ROC AUC
+@@@ Test set @@@      0.794 	 0.857 	 	0.906 	 	0.938 	 	0.892		0.789	 	0.971	 	0.919	0.945
+
+[Execlution number 69 out of 100]
+[Randomizing the rows]
+target_label = target
+[Dataset size]
+number of data instances (rows) = 264 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 195]
+73.864%
+[class: 1  #elements = 69]
+26.136%
+
+[training set = 80%]
+[test set = 20%]
+[Creating the training set and test set for the values]
+
+check
+[training set dimensions:  211  patients]
+[test set dimensions:  53  patients]
+[Creating the training set and test set for the labels "1"-"0"]
+[Dataset size]
+number of data instances (rows) = 211 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 104]
+49.289%
+[class: 1  #elements = 107]
+50.711%
+
+
+[Training the random forest classifier on the training set]
+
+[Applying the trained random forest classifier on the test set]
+
+PR AUC (integral) 	0.8190793
+ROC AUC 		0.9321895
+
+Brier score =  NA  (best value: 0; worst value: 1)
+
+TOTAL:
+
+ FN =  1  /  17 	 (truth == 1) & (prediction < threshold)
+ TP =  16  /  17 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  8  /  36 	 (truth == 0) & (prediction >= threshold)
+ TN =  28  /  36 	 (truth == 0) & (prediction < threshold)
+
+
+
+ @@@ Test set @@@ 	MCC 	 F1_score 	accuracy 	TP_rate 	TN_rate 	PPV 		NPV 		PR AUC 	ROC AUC
+@@@ Test set @@@      0.674 	 0.780 	 	0.830 	 	0.941 	 	0.778		0.667	 	0.966	 	0.819	0.932
+
+[Execlution number 70 out of 100]
+[Randomizing the rows]
+target_label = target
+[Dataset size]
+number of data instances (rows) = 264 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 195]
+73.864%
+[class: 1  #elements = 69]
+26.136%
+
+[training set = 80%]
+[test set = 20%]
+[Creating the training set and test set for the values]
+
+check
+[training set dimensions:  211  patients]
+[test set dimensions:  53  patients]
+[Creating the training set and test set for the labels "1"-"0"]
+[Dataset size]
+number of data instances (rows) = 211 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 104]
+49.289%
+[class: 1  #elements = 107]
+50.711%
+
+
+[Training the random forest classifier on the training set]
+
+[Applying the trained random forest classifier on the test set]
+
+PR AUC (integral) 	0.6389918
+ROC AUC 		0.8661616
+
+Brier score =  NA  (best value: 0; worst value: 1)
+
+TOTAL:
+
+ FN =  2  /  9 	 (truth == 1) & (prediction < threshold)
+ TP =  7  /  9 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  5  /  44 	 (truth == 0) & (prediction >= threshold)
+ TN =  39  /  44 	 (truth == 0) & (prediction < threshold)
+
+
+
+ @@@ Test set @@@ 	MCC 	 F1_score 	accuracy 	TP_rate 	TN_rate 	PPV 		NPV 		PR AUC 	ROC AUC
+@@@ Test set @@@      0.596 	 0.667 	 	0.868 	 	0.778 	 	0.886		0.583	 	0.951	 	0.639	0.866
+
+[Execlution number 71 out of 100]
+[Randomizing the rows]
+target_label = target
+[Dataset size]
+number of data instances (rows) = 264 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 195]
+73.864%
+[class: 1  #elements = 69]
+26.136%
+
+[training set = 80%]
+[test set = 20%]
+[Creating the training set and test set for the values]
+
+check
+[training set dimensions:  211  patients]
+[test set dimensions:  53  patients]
+[Creating the training set and test set for the labels "1"-"0"]
+[Dataset size]
+number of data instances (rows) = 211 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 104]
+49.289%
+[class: 1  #elements = 107]
+50.711%
+
+
+[Training the random forest classifier on the training set]
+
+[Applying the trained random forest classifier on the test set]
+
+PR AUC (integral) 	0.7554303
+ROC AUC 		0.8699634
+
+Brier score =  NA  (best value: 0; worst value: 1)
+
+TOTAL:
+
+ FN =  5  /  14 	 (truth == 1) & (prediction < threshold)
+ TP =  9  /  14 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  4  /  39 	 (truth == 0) & (prediction >= threshold)
+ TN =  35  /  39 	 (truth == 0) & (prediction < threshold)
+
+
+
+ @@@ Test set @@@ 	MCC 	 F1_score 	accuracy 	TP_rate 	TN_rate 	PPV 		NPV 		PR AUC 	ROC AUC
+@@@ Test set @@@      0.554 	 0.667 	 	0.830 	 	0.643 	 	0.897		0.692	 	0.875	 	0.755	0.870
+
+[Execlution number 72 out of 100]
+[Randomizing the rows]
+target_label = target
+[Dataset size]
+number of data instances (rows) = 264 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 195]
+73.864%
+[class: 1  #elements = 69]
+26.136%
+
+[training set = 80%]
+[test set = 20%]
+[Creating the training set and test set for the values]
+
+check
+[training set dimensions:  211  patients]
+[test set dimensions:  53  patients]
+[Creating the training set and test set for the labels "1"-"0"]
+[Dataset size]
+number of data instances (rows) = 211 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 104]
+49.289%
+[class: 1  #elements = 107]
+50.711%
+
+
+[Training the random forest classifier on the training set]
+
+[Applying the trained random forest classifier on the test set]
+
+PR AUC (integral) 	0.9402155
+ROC AUC 		0.969697
+
+Brier score =  NA  (best value: 0; worst value: 1)
+
+TOTAL:
+
+ FN =  0  /  20 	 (truth == 1) & (prediction < threshold)
+ TP =  20  /  20 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  5  /  33 	 (truth == 0) & (prediction >= threshold)
+ TN =  28  /  33 	 (truth == 0) & (prediction < threshold)
+
+
+
+ @@@ Test set @@@ 	MCC 	 F1_score 	accuracy 	TP_rate 	TN_rate 	PPV 		NPV 		PR AUC 	ROC AUC
+@@@ Test set @@@      0.824 	 0.889 	 	0.906 	 	1.000 	 	0.848		0.800	 	1.000	 	0.940	0.970
+
+[Execlution number 73 out of 100]
+[Randomizing the rows]
+target_label = target
+[Dataset size]
+number of data instances (rows) = 264 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 195]
+73.864%
+[class: 1  #elements = 69]
+26.136%
+
+[training set = 80%]
+[test set = 20%]
+[Creating the training set and test set for the values]
+
+check
+[training set dimensions:  211  patients]
+[test set dimensions:  53  patients]
+[Creating the training set and test set for the labels "1"-"0"]
+[Dataset size]
+number of data instances (rows) = 211 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 104]
+49.289%
+[class: 1  #elements = 107]
+50.711%
+
+
+[Training the random forest classifier on the training set]
+
+[Applying the trained random forest classifier on the test set]
+
+PR AUC (integral) 	0.583997
+ROC AUC 		0.8852814
+
+Brier score =  NA  (best value: 0; worst value: 1)
+
+TOTAL:
+
+ FN =  1  /  11 	 (truth == 1) & (prediction < threshold)
+ TP =  10  /  11 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  11  /  42 	 (truth == 0) & (prediction >= threshold)
+ TN =  31  /  42 	 (truth == 0) & (prediction < threshold)
+
+
+
+ @@@ Test set @@@ 	MCC 	 F1_score 	accuracy 	TP_rate 	TN_rate 	PPV 		NPV 		PR AUC 	ROC AUC
+@@@ Test set @@@      0.537 	 0.625 	 	0.774 	 	0.909 	 	0.738		0.476	 	0.969	 	0.584	0.885
+
+[Execlution number 74 out of 100]
+[Randomizing the rows]
+target_label = target
+[Dataset size]
+number of data instances (rows) = 264 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 195]
+73.864%
+[class: 1  #elements = 69]
+26.136%
+
+[training set = 80%]
+[test set = 20%]
+[Creating the training set and test set for the values]
+
+check
+[training set dimensions:  211  patients]
+[test set dimensions:  53  patients]
+[Creating the training set and test set for the labels "1"-"0"]
+[Dataset size]
+number of data instances (rows) = 211 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 104]
+49.289%
+[class: 1  #elements = 107]
+50.711%
+
+
+[Training the random forest classifier on the training set]
+
+[Applying the trained random forest classifier on the test set]
+
+PR AUC (integral) 	0.8178434
+ROC AUC 		0.9368132
+
+Brier score =  NA  (best value: 0; worst value: 1)
+
+TOTAL:
+
+ FN =  0  /  14 	 (truth == 1) & (prediction < threshold)
+ TP =  14  /  14 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  11  /  39 	 (truth == 0) & (prediction >= threshold)
+ TN =  28  /  39 	 (truth == 0) & (prediction < threshold)
+
+
+
+ @@@ Test set @@@ 	MCC 	 F1_score 	accuracy 	TP_rate 	TN_rate 	PPV 		NPV 		PR AUC 	ROC AUC
+@@@ Test set @@@      0.634 	 0.718 	 	0.792 	 	1.000 	 	0.718		0.560	 	1.000	 	0.818	0.937
+
+[Execlution number 75 out of 100]
+[Randomizing the rows]
+target_label = target
+[Dataset size]
+number of data instances (rows) = 264 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 195]
+73.864%
+[class: 1  #elements = 69]
+26.136%
+
+[training set = 80%]
+[test set = 20%]
+[Creating the training set and test set for the values]
+
+check
+[training set dimensions:  211  patients]
+[test set dimensions:  53  patients]
+[Creating the training set and test set for the labels "1"-"0"]
+[Dataset size]
+number of data instances (rows) = 211 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 104]
+49.289%
+[class: 1  #elements = 107]
+50.711%
+
+
+[Training the random forest classifier on the training set]
+
+[Applying the trained random forest classifier on the test set]
+
+PR AUC (integral) 	0.7273476
+ROC AUC 		0.8065878
+
+Brier score =  NA  (best value: 0; worst value: 1)
+
+TOTAL:
+
+ FN =  3  /  16 	 (truth == 1) & (prediction < threshold)
+ TP =  13  /  16 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  17  /  37 	 (truth == 0) & (prediction >= threshold)
+ TN =  20  /  37 	 (truth == 0) & (prediction < threshold)
+
+
+
+ @@@ Test set @@@ 	MCC 	 F1_score 	accuracy 	TP_rate 	TN_rate 	PPV 		NPV 		PR AUC 	ROC AUC
+@@@ Test set @@@      0.327 	 0.565 	 	0.623 	 	0.812 	 	0.541		0.433	 	0.870	 	0.727	0.807
+
+[Execlution number 76 out of 100]
+[Randomizing the rows]
+target_label = target
+[Dataset size]
+number of data instances (rows) = 264 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 195]
+73.864%
+[class: 1  #elements = 69]
+26.136%
+
+[training set = 80%]
+[test set = 20%]
+[Creating the training set and test set for the values]
+
+check
+[training set dimensions:  211  patients]
+[test set dimensions:  53  patients]
+[Creating the training set and test set for the labels "1"-"0"]
+[Dataset size]
+number of data instances (rows) = 211 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 104]
+49.289%
+[class: 1  #elements = 107]
+50.711%
+
+
+[Training the random forest classifier on the training set]
+
+[Applying the trained random forest classifier on the test set]
+
+PR AUC (integral) 	0.8116686
+ROC AUC 		0.8958333
+
+Brier score =  NA  (best value: 0; worst value: 1)
+
+TOTAL:
+
+ FN =  0  /  21 	 (truth == 1) & (prediction < threshold)
+ TP =  21  /  21 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  23  /  32 	 (truth == 0) & (prediction >= threshold)
+ TN =  9  /  32 	 (truth == 0) & (prediction < threshold)
+
+
+
+ @@@ Test set @@@ 	MCC 	 F1_score 	accuracy 	TP_rate 	TN_rate 	PPV 		NPV 		PR AUC 	ROC AUC
+@@@ Test set @@@      0.366 	 0.646 	 	0.566 	 	1.000 	 	0.281		0.477	 	1.000	 	0.812	0.896
+
+[Execlution number 77 out of 100]
+[Randomizing the rows]
+target_label = target
+[Dataset size]
+number of data instances (rows) = 264 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 195]
+73.864%
+[class: 1  #elements = 69]
+26.136%
+
+[training set = 80%]
+[test set = 20%]
+[Creating the training set and test set for the values]
+
+check
+[training set dimensions:  211  patients]
+[test set dimensions:  53  patients]
+[Creating the training set and test set for the labels "1"-"0"]
+[Dataset size]
+number of data instances (rows) = 211 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 104]
+49.289%
+[class: 1  #elements = 107]
+50.711%
+
+
+[Training the random forest classifier on the training set]
+
+[Applying the trained random forest classifier on the test set]
+
+PR AUC (integral) 	0.8186565
+ROC AUC 		0.9227642
+
+Brier score =  NA  (best value: 0; worst value: 1)
+
+TOTAL:
+
+ FN =  2  /  12 	 (truth == 1) & (prediction < threshold)
+ TP =  10  /  12 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  5  /  41 	 (truth == 0) & (prediction >= threshold)
+ TN =  36  /  41 	 (truth == 0) & (prediction < threshold)
+
+
+
+ @@@ Test set @@@ 	MCC 	 F1_score 	accuracy 	TP_rate 	TN_rate 	PPV 		NPV 		PR AUC 	ROC AUC
+@@@ Test set @@@      0.661 	 0.741 	 	0.868 	 	0.833 	 	0.878		0.667	 	0.947	 	0.819	0.923
+
+[Execlution number 78 out of 100]
+[Randomizing the rows]
+target_label = target
+[Dataset size]
+number of data instances (rows) = 264 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 195]
+73.864%
+[class: 1  #elements = 69]
+26.136%
+
+[training set = 80%]
+[test set = 20%]
+[Creating the training set and test set for the values]
+
+check
+[training set dimensions:  211  patients]
+[test set dimensions:  53  patients]
+[Creating the training set and test set for the labels "1"-"0"]
+[Dataset size]
+number of data instances (rows) = 211 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 104]
+49.289%
+[class: 1  #elements = 107]
+50.711%
+
+
+[Training the random forest classifier on the training set]
+
+[Applying the trained random forest classifier on the test set]
+
+PR AUC (integral) 	0.646676
+ROC AUC 		0.8191057
+
+Brier score =  NA  (best value: 0; worst value: 1)
+
+TOTAL:
+
+ FN =  3  /  12 	 (truth == 1) & (prediction < threshold)
+ TP =  9  /  12 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  13  /  41 	 (truth == 0) & (prediction >= threshold)
+ TN =  28  /  41 	 (truth == 0) & (prediction < threshold)
+
+
+
+ @@@ Test set @@@ 	MCC 	 F1_score 	accuracy 	TP_rate 	TN_rate 	PPV 		NPV 		PR AUC 	ROC AUC
+@@@ Test set @@@      0.368 	 0.529 	 	0.698 	 	0.750 	 	0.683		0.409	 	0.903	 	0.647	0.819
+
+[Execlution number 79 out of 100]
+[Randomizing the rows]
+target_label = target
+[Dataset size]
+number of data instances (rows) = 264 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 195]
+73.864%
+[class: 1  #elements = 69]
+26.136%
+
+[training set = 80%]
+[test set = 20%]
+[Creating the training set and test set for the values]
+
+check
+[training set dimensions:  211  patients]
+[test set dimensions:  53  patients]
+[Creating the training set and test set for the labels "1"-"0"]
+[Dataset size]
+number of data instances (rows) = 211 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 104]
+49.289%
+[class: 1  #elements = 107]
+50.711%
+
+
+[Training the random forest classifier on the training set]
+
+[Applying the trained random forest classifier on the test set]
+
+PR AUC (integral) 	0.3769892
+ROC AUC 		0.9041667
+
+Brier score =  NA  (best value: 0; worst value: 1)
+
+TOTAL:
+
+ FN =  1  /  5 	 (truth == 1) & (prediction < threshold)
+ TP =  4  /  5 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  12  /  48 	 (truth == 0) & (prediction >= threshold)
+ TN =  36  /  48 	 (truth == 0) & (prediction < threshold)
+
+
+
+ @@@ Test set @@@ 	MCC 	 F1_score 	accuracy 	TP_rate 	TN_rate 	PPV 		NPV 		PR AUC 	ROC AUC
+@@@ Test set @@@      0.350 	 0.381 	 	0.755 	 	0.800 	 	0.750		0.250	 	0.973	 	0.377	0.904
+
+[Execlution number 80 out of 100]
+[Randomizing the rows]
+target_label = target
+[Dataset size]
+number of data instances (rows) = 264 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 195]
+73.864%
+[class: 1  #elements = 69]
+26.136%
+
+[training set = 80%]
+[test set = 20%]
+[Creating the training set and test set for the values]
+
+check
+[training set dimensions:  211  patients]
+[test set dimensions:  53  patients]
+[Creating the training set and test set for the labels "1"-"0"]
+[Dataset size]
+number of data instances (rows) = 211 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 104]
+49.289%
+[class: 1  #elements = 107]
+50.711%
+
+
+[Training the random forest classifier on the training set]
+
+[Applying the trained random forest classifier on the test set]
+
+PR AUC (integral) 	0.7787149
+ROC AUC 		0.8690878
+
+Brier score =  NA  (best value: 0; worst value: 1)
+
+TOTAL:
+
+ FN =  4  /  16 	 (truth == 1) & (prediction < threshold)
+ TP =  12  /  16 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  4  /  37 	 (truth == 0) & (prediction >= threshold)
+ TN =  33  /  37 	 (truth == 0) & (prediction < threshold)
+
+
+
+ @@@ Test set @@@ 	MCC 	 F1_score 	accuracy 	TP_rate 	TN_rate 	PPV 		NPV 		PR AUC 	ROC AUC
+@@@ Test set @@@      0.642 	 0.750 	 	0.849 	 	0.750 	 	0.892		0.750	 	0.892	 	0.779	0.869
+
+[Execlution number 81 out of 100]
+[Randomizing the rows]
+target_label = target
+[Dataset size]
+number of data instances (rows) = 264 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 195]
+73.864%
+[class: 1  #elements = 69]
+26.136%
+
+[training set = 80%]
+[test set = 20%]
+[Creating the training set and test set for the values]
+
+check
+[training set dimensions:  211  patients]
+[test set dimensions:  53  patients]
+[Creating the training set and test set for the labels "1"-"0"]
+[Dataset size]
+number of data instances (rows) = 211 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 104]
+49.289%
+[class: 1  #elements = 107]
+50.711%
+
+
+[Training the random forest classifier on the training set]
+
+[Applying the trained random forest classifier on the test set]
+
+PR AUC (integral) 	0.7273845
+ROC AUC 		0.8974359
+
+Brier score =  NA  (best value: 0; worst value: 1)
+
+TOTAL:
+
+ FN =  1  /  14 	 (truth == 1) & (prediction < threshold)
+ TP =  13  /  14 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  7  /  39 	 (truth == 0) & (prediction >= threshold)
+ TN =  32  /  39 	 (truth == 0) & (prediction < threshold)
+
+
+
+ @@@ Test set @@@ 	MCC 	 F1_score 	accuracy 	TP_rate 	TN_rate 	PPV 		NPV 		PR AUC 	ROC AUC
+@@@ Test set @@@      0.681 	 0.765 	 	0.849 	 	0.929 	 	0.821		0.650	 	0.970	 	0.727	0.897
+
+[Execlution number 82 out of 100]
+[Randomizing the rows]
+target_label = target
+[Dataset size]
+number of data instances (rows) = 264 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 195]
+73.864%
+[class: 1  #elements = 69]
+26.136%
+
+[training set = 80%]
+[test set = 20%]
+[Creating the training set and test set for the values]
+
+check
+[training set dimensions:  211  patients]
+[test set dimensions:  53  patients]
+[Creating the training set and test set for the labels "1"-"0"]
+[Dataset size]
+number of data instances (rows) = 211 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 104]
+49.289%
+[class: 1  #elements = 107]
+50.711%
+
+
+[Training the random forest classifier on the training set]
+
+[Applying the trained random forest classifier on the test set]
+
+PR AUC (integral) 	0.7415011
+ROC AUC 		0.8351648
+
+Brier score =  NA  (best value: 0; worst value: 1)
+
+TOTAL:
+
+ FN =  2  /  14 	 (truth == 1) & (prediction < threshold)
+ TP =  12  /  14 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  14  /  39 	 (truth == 0) & (prediction >= threshold)
+ TN =  25  /  39 	 (truth == 0) & (prediction < threshold)
+
+
+
+ @@@ Test set @@@ 	MCC 	 F1_score 	accuracy 	TP_rate 	TN_rate 	PPV 		NPV 		PR AUC 	ROC AUC
+@@@ Test set @@@      0.439 	 0.600 	 	0.698 	 	0.857 	 	0.641		0.462	 	0.926	 	0.742	0.835
+
+[Execlution number 83 out of 100]
+[Randomizing the rows]
+target_label = target
+[Dataset size]
+number of data instances (rows) = 264 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 195]
+73.864%
+[class: 1  #elements = 69]
+26.136%
+
+[training set = 80%]
+[test set = 20%]
+[Creating the training set and test set for the values]
+
+check
+[training set dimensions:  211  patients]
+[test set dimensions:  53  patients]
+[Creating the training set and test set for the labels "1"-"0"]
+[Dataset size]
+number of data instances (rows) = 211 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 104]
+49.289%
+[class: 1  #elements = 107]
+50.711%
+
+
+[Training the random forest classifier on the training set]
+
+[Applying the trained random forest classifier on the test set]
+
+PR AUC (integral) 	0.8188119
+ROC AUC 		0.8982456
+
+Brier score =  NA  (best value: 0; worst value: 1)
+
+TOTAL:
+
+ FN =  2  /  15 	 (truth == 1) & (prediction < threshold)
+ TP =  13  /  15 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  15  /  38 	 (truth == 0) & (prediction >= threshold)
+ TN =  23  /  38 	 (truth == 0) & (prediction < threshold)
+
+
+
+ @@@ Test set @@@ 	MCC 	 F1_score 	accuracy 	TP_rate 	TN_rate 	PPV 		NPV 		PR AUC 	ROC AUC
+@@@ Test set @@@      0.426 	 0.605 	 	0.679 	 	0.867 	 	0.605		0.464	 	0.920	 	0.819	0.898
+
+[Execlution number 84 out of 100]
+[Randomizing the rows]
+target_label = target
+[Dataset size]
+number of data instances (rows) = 264 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 195]
+73.864%
+[class: 1  #elements = 69]
+26.136%
+
+[training set = 80%]
+[test set = 20%]
+[Creating the training set and test set for the values]
+
+check
+[training set dimensions:  211  patients]
+[test set dimensions:  53  patients]
+[Creating the training set and test set for the labels "1"-"0"]
+[Dataset size]
+number of data instances (rows) = 211 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 104]
+49.289%
+[class: 1  #elements = 107]
+50.711%
+
+
+[Training the random forest classifier on the training set]
+
+[Applying the trained random forest classifier on the test set]
+
+PR AUC (integral) 	0.7314354
+ROC AUC 		0.8423077
+
+Brier score =  NA  (best value: 0; worst value: 1)
+
+TOTAL:
+
+ FN =  3  /  13 	 (truth == 1) & (prediction < threshold)
+ TP =  10  /  13 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  12  /  40 	 (truth == 0) & (prediction >= threshold)
+ TN =  28  /  40 	 (truth == 0) & (prediction < threshold)
+
+
+
+ @@@ Test set @@@ 	MCC 	 F1_score 	accuracy 	TP_rate 	TN_rate 	PPV 		NPV 		PR AUC 	ROC AUC
+@@@ Test set @@@      0.410 	 0.571 	 	0.717 	 	0.769 	 	0.700		0.455	 	0.903	 	0.731	0.842
+
+[Execlution number 85 out of 100]
+[Randomizing the rows]
+target_label = target
+[Dataset size]
+number of data instances (rows) = 264 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 195]
+73.864%
+[class: 1  #elements = 69]
+26.136%
+
+[training set = 80%]
+[test set = 20%]
+[Creating the training set and test set for the values]
+
+check
+[training set dimensions:  211  patients]
+[test set dimensions:  53  patients]
+[Creating the training set and test set for the labels "1"-"0"]
+[Dataset size]
+number of data instances (rows) = 211 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 104]
+49.289%
+[class: 1  #elements = 107]
+50.711%
+
+
+[Training the random forest classifier on the training set]
+
+[Applying the trained random forest classifier on the test set]
+
+PR AUC (integral) 	0.6650838
+ROC AUC 		0.8569767
+
+Brier score =  NA  (best value: 0; worst value: 1)
+
+TOTAL:
+
+ FN =  2  /  10 	 (truth == 1) & (prediction < threshold)
+ TP =  8  /  10 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  11  /  43 	 (truth == 0) & (prediction >= threshold)
+ TN =  32  /  43 	 (truth == 0) & (prediction < threshold)
+
+
+
+ @@@ Test set @@@ 	MCC 	 F1_score 	accuracy 	TP_rate 	TN_rate 	PPV 		NPV 		PR AUC 	ROC AUC
+@@@ Test set @@@      0.444 	 0.552 	 	0.755 	 	0.800 	 	0.744		0.421	 	0.941	 	0.665	0.857
+
+[Execlution number 86 out of 100]
+[Randomizing the rows]
+target_label = target
+[Dataset size]
+number of data instances (rows) = 264 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 195]
+73.864%
+[class: 1  #elements = 69]
+26.136%
+
+[training set = 80%]
+[test set = 20%]
+[Creating the training set and test set for the values]
+
+check
+[training set dimensions:  211  patients]
+[test set dimensions:  53  patients]
+[Creating the training set and test set for the labels "1"-"0"]
+[Dataset size]
+number of data instances (rows) = 211 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 104]
+49.289%
+[class: 1  #elements = 107]
+50.711%
+
+
+[Training the random forest classifier on the training set]
+
+[Applying the trained random forest classifier on the test set]
+
+PR AUC (integral) 	0.7410515
+ROC AUC 		0.9069767
+
+Brier score =  NA  (best value: 0; worst value: 1)
+
+TOTAL:
+
+ FN =  1  /  10 	 (truth == 1) & (prediction < threshold)
+ TP =  9  /  10 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  20  /  43 	 (truth == 0) & (prediction >= threshold)
+ TN =  23  /  43 	 (truth == 0) & (prediction < threshold)
+
+
+
+ @@@ Test set @@@ 	MCC 	 F1_score 	accuracy 	TP_rate 	TN_rate 	PPV 		NPV 		PR AUC 	ROC AUC
+@@@ Test set @@@      0.342 	 0.462 	 	0.604 	 	0.900 	 	0.535		0.310	 	0.958	 	0.741	0.907
+
+[Execlution number 87 out of 100]
+[Randomizing the rows]
+target_label = target
+[Dataset size]
+number of data instances (rows) = 264 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 195]
+73.864%
+[class: 1  #elements = 69]
+26.136%
+
+[training set = 80%]
+[test set = 20%]
+[Creating the training set and test set for the values]
+
+check
+[training set dimensions:  211  patients]
+[test set dimensions:  53  patients]
+[Creating the training set and test set for the labels "1"-"0"]
+[Dataset size]
+number of data instances (rows) = 211 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 104]
+49.289%
+[class: 1  #elements = 107]
+50.711%
+
+
+[Training the random forest classifier on the training set]
+
+[Applying the trained random forest classifier on the test set]
+
+PR AUC (integral) 	0.7879256
+ROC AUC 		0.9015152
+
+Brier score =  NA  (best value: 0; worst value: 1)
+
+TOTAL:
+
+ FN =  5  /  11 	 (truth == 1) & (prediction < threshold)
+ TP =  6  /  11 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  4  /  42 	 (truth == 0) & (prediction >= threshold)
+ TN =  38  /  42 	 (truth == 0) & (prediction < threshold)
+
+
+
+ @@@ Test set @@@ 	MCC 	 F1_score 	accuracy 	TP_rate 	TN_rate 	PPV 		NPV 		PR AUC 	ROC AUC
+@@@ Test set @@@      0.467 	 0.571 	 	0.830 	 	0.545 	 	0.905		0.600	 	0.884	 	0.788	0.902
+
+[Execlution number 88 out of 100]
+[Randomizing the rows]
+target_label = target
+[Dataset size]
+number of data instances (rows) = 264 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 195]
+73.864%
+[class: 1  #elements = 69]
+26.136%
+
+[training set = 80%]
+[test set = 20%]
+[Creating the training set and test set for the values]
+
+check
+[training set dimensions:  211  patients]
+[test set dimensions:  53  patients]
+[Creating the training set and test set for the labels "1"-"0"]
+[Dataset size]
+number of data instances (rows) = 211 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 104]
+49.289%
+[class: 1  #elements = 107]
+50.711%
+
+
+[Training the random forest classifier on the training set]
+
+[Applying the trained random forest classifier on the test set]
+
+PR AUC (integral) 	0.6930757
+ROC AUC 		0.8149123
+
+Brier score =  NA  (best value: 0; worst value: 1)
+
+TOTAL:
+
+ FN =  2  /  15 	 (truth == 1) & (prediction < threshold)
+ TP =  13  /  15 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  19  /  38 	 (truth == 0) & (prediction >= threshold)
+ TN =  19  /  38 	 (truth == 0) & (prediction < threshold)
+
+
+
+ @@@ Test set @@@ 	MCC 	 F1_score 	accuracy 	TP_rate 	TN_rate 	PPV 		NPV 		PR AUC 	ROC AUC
+@@@ Test set @@@      0.338 	 0.553 	 	0.604 	 	0.867 	 	0.500		0.406	 	0.905	 	0.693	0.815
+
+[Execlution number 89 out of 100]
+[Randomizing the rows]
+target_label = target
+[Dataset size]
+number of data instances (rows) = 264 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 195]
+73.864%
+[class: 1  #elements = 69]
+26.136%
+
+[training set = 80%]
+[test set = 20%]
+[Creating the training set and test set for the values]
+
+check
+[training set dimensions:  211  patients]
+[test set dimensions:  53  patients]
+[Creating the training set and test set for the labels "1"-"0"]
+[Dataset size]
+number of data instances (rows) = 211 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 104]
+49.289%
+[class: 1  #elements = 107]
+50.711%
+
+
+[Training the random forest classifier on the training set]
+
+[Applying the trained random forest classifier on the test set]
+
+PR AUC (integral) 	0.5929878
+ROC AUC 		0.795614
+
+Brier score =  NA  (best value: 0; worst value: 1)
+
+TOTAL:
+
+ FN =  5  /  15 	 (truth == 1) & (prediction < threshold)
+ TP =  10  /  15 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  10  /  38 	 (truth == 0) & (prediction >= threshold)
+ TN =  28  /  38 	 (truth == 0) & (prediction < threshold)
+
+
+
+ @@@ Test set @@@ 	MCC 	 F1_score 	accuracy 	TP_rate 	TN_rate 	PPV 		NPV 		PR AUC 	ROC AUC
+@@@ Test set @@@      0.375 	 0.571 	 	0.717 	 	0.667 	 	0.737		0.500	 	0.848	 	0.593	0.796
+
+[Execlution number 90 out of 100]
+[Randomizing the rows]
+target_label = target
+[Dataset size]
+number of data instances (rows) = 264 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 195]
+73.864%
+[class: 1  #elements = 69]
+26.136%
+
+[training set = 80%]
+[test set = 20%]
+[Creating the training set and test set for the values]
+
+check
+[training set dimensions:  211  patients]
+[test set dimensions:  53  patients]
+[Creating the training set and test set for the labels "1"-"0"]
+[Dataset size]
+number of data instances (rows) = 211 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 104]
+49.289%
+[class: 1  #elements = 107]
+50.711%
+
+
+[Training the random forest classifier on the training set]
+
+[Applying the trained random forest classifier on the test set]
+
+PR AUC (integral) 	0.7714094
+ROC AUC 		0.9304029
+
+Brier score =  NA  (best value: 0; worst value: 1)
+
+TOTAL:
+
+ FN =  0  /  14 	 (truth == 1) & (prediction < threshold)
+ TP =  14  /  14 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  13  /  39 	 (truth == 0) & (prediction >= threshold)
+ TN =  26  /  39 	 (truth == 0) & (prediction < threshold)
+
+
+
+ @@@ Test set @@@ 	MCC 	 F1_score 	accuracy 	TP_rate 	TN_rate 	PPV 		NPV 		PR AUC 	ROC AUC
+@@@ Test set @@@      0.588 	 0.683 	 	0.755 	 	1.000 	 	0.667		0.519	 	1.000	 	0.771	0.930
+
+[Execlution number 91 out of 100]
+[Randomizing the rows]
+target_label = target
+[Dataset size]
+number of data instances (rows) = 264 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 195]
+73.864%
+[class: 1  #elements = 69]
+26.136%
+
+[training set = 80%]
+[test set = 20%]
+[Creating the training set and test set for the values]
+
+check
+[training set dimensions:  211  patients]
+[test set dimensions:  53  patients]
+[Creating the training set and test set for the labels "1"-"0"]
+[Dataset size]
+number of data instances (rows) = 211 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 104]
+49.289%
+[class: 1  #elements = 107]
+50.711%
+
+
+[Training the random forest classifier on the training set]
+
+[Applying the trained random forest classifier on the test set]
+
+PR AUC (integral) 	0.7000146
+ROC AUC 		0.8114035
+
+Brier score =  NA  (best value: 0; worst value: 1)
+
+TOTAL:
+
+ FN =  3  /  15 	 (truth == 1) & (prediction < threshold)
+ TP =  12  /  15 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  14  /  38 	 (truth == 0) & (prediction >= threshold)
+ TN =  24  /  38 	 (truth == 0) & (prediction < threshold)
+
+
+
+ @@@ Test set @@@ 	MCC 	 F1_score 	accuracy 	TP_rate 	TN_rate 	PPV 		NPV 		PR AUC 	ROC AUC
+@@@ Test set @@@      0.389 	 0.585 	 	0.679 	 	0.800 	 	0.632		0.462	 	0.889	 	0.700	0.811
+
+[Execlution number 92 out of 100]
+[Randomizing the rows]
+target_label = target
+[Dataset size]
+number of data instances (rows) = 264 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 195]
+73.864%
+[class: 1  #elements = 69]
+26.136%
+
+[training set = 80%]
+[test set = 20%]
+[Creating the training set and test set for the values]
+
+check
+[training set dimensions:  211  patients]
+[test set dimensions:  53  patients]
+[Creating the training set and test set for the labels "1"-"0"]
+[Dataset size]
+number of data instances (rows) = 211 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 104]
+49.289%
+[class: 1  #elements = 107]
+50.711%
+
+
+[Training the random forest classifier on the training set]
+
+[Applying the trained random forest classifier on the test set]
+
+PR AUC (integral) 	0.8318482
+ROC AUC 		0.9197154
+
+Brier score =  NA  (best value: 0; worst value: 1)
+
+TOTAL:
+
+ FN =  2  /  12 	 (truth == 1) & (prediction < threshold)
+ TP =  10  /  12 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  3  /  41 	 (truth == 0) & (prediction >= threshold)
+ TN =  38  /  41 	 (truth == 0) & (prediction < threshold)
+
+
+
+ @@@ Test set @@@ 	MCC 	 F1_score 	accuracy 	TP_rate 	TN_rate 	PPV 		NPV 		PR AUC 	ROC AUC
+@@@ Test set @@@      0.739 	 0.800 	 	0.906 	 	0.833 	 	0.927		0.769	 	0.950	 	0.832	0.920
+
+[Execlution number 93 out of 100]
+[Randomizing the rows]
+target_label = target
+[Dataset size]
+number of data instances (rows) = 264 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 195]
+73.864%
+[class: 1  #elements = 69]
+26.136%
+
+[training set = 80%]
+[test set = 20%]
+[Creating the training set and test set for the values]
+
+check
+[training set dimensions:  211  patients]
+[test set dimensions:  53  patients]
+[Creating the training set and test set for the labels "1"-"0"]
+[Dataset size]
+number of data instances (rows) = 211 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 104]
+49.289%
+[class: 1  #elements = 107]
+50.711%
+
+
+[Training the random forest classifier on the training set]
+
+[Applying the trained random forest classifier on the test set]
+
+PR AUC (integral) 	0.759505
+ROC AUC 		0.9173077
+
+Brier score =  NA  (best value: 0; worst value: 1)
+
+TOTAL:
+
+ FN =  1  /  13 	 (truth == 1) & (prediction < threshold)
+ TP =  12  /  13 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  15  /  40 	 (truth == 0) & (prediction >= threshold)
+ TN =  25  /  40 	 (truth == 0) & (prediction < threshold)
+
+
+
+ @@@ Test set @@@ 	MCC 	 F1_score 	accuracy 	TP_rate 	TN_rate 	PPV 		NPV 		PR AUC 	ROC AUC
+@@@ Test set @@@      0.472 	 0.600 	 	0.698 	 	0.923 	 	0.625		0.444	 	0.962	 	0.760	0.917
+
+[Execlution number 94 out of 100]
+[Randomizing the rows]
+target_label = target
+[Dataset size]
+number of data instances (rows) = 264 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 195]
+73.864%
+[class: 1  #elements = 69]
+26.136%
+
+[training set = 80%]
+[test set = 20%]
+[Creating the training set and test set for the values]
+
+check
+[training set dimensions:  211  patients]
+[test set dimensions:  53  patients]
+[Creating the training set and test set for the labels "1"-"0"]
+[Dataset size]
+number of data instances (rows) = 211 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 104]
+49.289%
+[class: 1  #elements = 107]
+50.711%
+
+
+[Training the random forest classifier on the training set]
+
+[Applying the trained random forest classifier on the test set]
+
+PR AUC (integral) 	0.6340259
+ROC AUC 		0.8790698
+
+Brier score =  NA  (best value: 0; worst value: 1)
+
+TOTAL:
+
+ FN =  1  /  10 	 (truth == 1) & (prediction < threshold)
+ TP =  9  /  10 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  14  /  43 	 (truth == 0) & (prediction >= threshold)
+ TN =  29  /  43 	 (truth == 0) & (prediction < threshold)
+
+
+
+ @@@ Test set @@@ 	MCC 	 F1_score 	accuracy 	TP_rate 	TN_rate 	PPV 		NPV 		PR AUC 	ROC AUC
+@@@ Test set @@@      0.453 	 0.545 	 	0.717 	 	0.900 	 	0.674		0.391	 	0.967	 	0.634	0.879
+
+[Execlution number 95 out of 100]
+[Randomizing the rows]
+target_label = target
+[Dataset size]
+number of data instances (rows) = 264 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 195]
+73.864%
+[class: 1  #elements = 69]
+26.136%
+
+[training set = 80%]
+[test set = 20%]
+[Creating the training set and test set for the values]
+
+check
+[training set dimensions:  211  patients]
+[test set dimensions:  53  patients]
+[Creating the training set and test set for the labels "1"-"0"]
+[Dataset size]
+number of data instances (rows) = 211 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 104]
+49.289%
+[class: 1  #elements = 107]
+50.711%
+
+
+[Training the random forest classifier on the training set]
+
+[Applying the trained random forest classifier on the test set]
+
+PR AUC (integral) 	0.7555687
+ROC AUC 		0.8938596
+
+Brier score =  NA  (best value: 0; worst value: 1)
+
+TOTAL:
+
+ FN =  0  /  15 	 (truth == 1) & (prediction < threshold)
+ TP =  15  /  15 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  20  /  38 	 (truth == 0) & (prediction >= threshold)
+ TN =  18  /  38 	 (truth == 0) & (prediction < threshold)
+
+
+
+ @@@ Test set @@@ 	MCC 	 F1_score 	accuracy 	TP_rate 	TN_rate 	PPV 		NPV 		PR AUC 	ROC AUC
+@@@ Test set @@@      0.451 	 0.600 	 	0.623 	 	1.000 	 	0.474		0.429	 	1.000	 	0.756	0.894
+
+[Execlution number 96 out of 100]
+[Randomizing the rows]
+target_label = target
+[Dataset size]
+number of data instances (rows) = 264 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 195]
+73.864%
+[class: 1  #elements = 69]
+26.136%
+
+[training set = 80%]
+[test set = 20%]
+[Creating the training set and test set for the values]
+
+check
+[training set dimensions:  211  patients]
+[test set dimensions:  53  patients]
+[Creating the training set and test set for the labels "1"-"0"]
+[Dataset size]
+number of data instances (rows) = 211 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 104]
+49.289%
+[class: 1  #elements = 107]
+50.711%
+
+
+[Training the random forest classifier on the training set]
+
+[Applying the trained random forest classifier on the test set]
+
+PR AUC (integral) 	0.9527381
+ROC AUC 		0.9798246
+
+Brier score =  NA  (best value: 0; worst value: 1)
+
+TOTAL:
+
+ FN =  0  /  15 	 (truth == 1) & (prediction < threshold)
+ TP =  15  /  15 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  10  /  38 	 (truth == 0) & (prediction >= threshold)
+ TN =  28  /  38 	 (truth == 0) & (prediction < threshold)
+
+
+
+ @@@ Test set @@@ 	MCC 	 F1_score 	accuracy 	TP_rate 	TN_rate 	PPV 		NPV 		PR AUC 	ROC AUC
+@@@ Test set @@@      0.665 	 0.750 	 	0.811 	 	1.000 	 	0.737		0.600	 	1.000	 	0.953	0.980
+
+[Execlution number 97 out of 100]
+[Randomizing the rows]
+target_label = target
+[Dataset size]
+number of data instances (rows) = 264 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 195]
+73.864%
+[class: 1  #elements = 69]
+26.136%
+
+[training set = 80%]
+[test set = 20%]
+[Creating the training set and test set for the values]
+
+check
+[training set dimensions:  211  patients]
+[test set dimensions:  53  patients]
+[Creating the training set and test set for the labels "1"-"0"]
+[Dataset size]
+number of data instances (rows) = 211 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 104]
+49.289%
+[class: 1  #elements = 107]
+50.711%
+
+
+[Training the random forest classifier on the training set]
+
+[Applying the trained random forest classifier on the test set]
+
+PR AUC (integral) 	0.6372381
+ROC AUC 		0.8353659
+
+Brier score =  NA  (best value: 0; worst value: 1)
+
+TOTAL:
+
+ FN =  3  /  12 	 (truth == 1) & (prediction < threshold)
+ TP =  9  /  12 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  14  /  41 	 (truth == 0) & (prediction >= threshold)
+ TN =  27  /  41 	 (truth == 0) & (prediction < threshold)
+
+
+
+ @@@ Test set @@@ 	MCC 	 F1_score 	accuracy 	TP_rate 	TN_rate 	PPV 		NPV 		PR AUC 	ROC AUC
+@@@ Test set @@@      0.345 	 0.514 	 	0.679 	 	0.750 	 	0.659		0.391	 	0.900	 	0.637	0.835
+
+[Execlution number 98 out of 100]
+[Randomizing the rows]
+target_label = target
+[Dataset size]
+number of data instances (rows) = 264 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 195]
+73.864%
+[class: 1  #elements = 69]
+26.136%
+
+[training set = 80%]
+[test set = 20%]
+[Creating the training set and test set for the values]
+
+check
+[training set dimensions:  211  patients]
+[test set dimensions:  53  patients]
+[Creating the training set and test set for the labels "1"-"0"]
+[Dataset size]
+number of data instances (rows) = 211 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 104]
+49.289%
+[class: 1  #elements = 107]
+50.711%
+
+
+[Training the random forest classifier on the training set]
+
+[Applying the trained random forest classifier on the test set]
+
+PR AUC (integral) 	0.5949193
+ROC AUC 		0.7916667
+
+Brier score =  NA  (best value: 0; worst value: 1)
+
+TOTAL:
+
+ FN =  1  /  12 	 (truth == 1) & (prediction < threshold)
+ TP =  11  /  12 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  23  /  41 	 (truth == 0) & (prediction >= threshold)
+ TN =  18  /  41 	 (truth == 0) & (prediction < threshold)
+
+
+
+ @@@ Test set @@@ 	MCC 	 F1_score 	accuracy 	TP_rate 	TN_rate 	PPV 		NPV 		PR AUC 	ROC AUC
+@@@ Test set @@@      0.310 	 0.478 	 	0.547 	 	0.917 	 	0.439		0.324	 	0.947	 	0.595	0.792
+
+[Execlution number 99 out of 100]
+[Randomizing the rows]
+target_label = target
+[Dataset size]
+number of data instances (rows) = 264 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 195]
+73.864%
+[class: 1  #elements = 69]
+26.136%
+
+[training set = 80%]
+[test set = 20%]
+[Creating the training set and test set for the values]
+
+check
+[training set dimensions:  211  patients]
+[test set dimensions:  53  patients]
+[Creating the training set and test set for the labels "1"-"0"]
+[Dataset size]
+number of data instances (rows) = 211 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 104]
+49.289%
+[class: 1  #elements = 107]
+50.711%
+
+
+[Training the random forest classifier on the training set]
+
+[Applying the trained random forest classifier on the test set]
+
+PR AUC (integral) 	0.7507156
+ROC AUC 		0.871732
+
+Brier score =  NA  (best value: 0; worst value: 1)
+
+TOTAL:
+
+ FN =  4  /  17 	 (truth == 1) & (prediction < threshold)
+ TP =  13  /  17 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  7  /  36 	 (truth == 0) & (prediction >= threshold)
+ TN =  29  /  36 	 (truth == 0) & (prediction < threshold)
+
+
+
+ @@@ Test set @@@ 	MCC 	 F1_score 	accuracy 	TP_rate 	TN_rate 	PPV 		NPV 		PR AUC 	ROC AUC
+@@@ Test set @@@      0.549 	 0.703 	 	0.792 	 	0.765 	 	0.806		0.650	 	0.879	 	0.751	0.872
+
+[Execlution number 100 out of 100]
+[Randomizing the rows]
+target_label = target
+[Dataset size]
+number of data instances (rows) = 264 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 195]
+73.864%
+[class: 1  #elements = 69]
+26.136%
+
+[training set = 80%]
+[test set = 20%]
+[Creating the training set and test set for the values]
+
+check
+[training set dimensions:  211  patients]
+[test set dimensions:  53  patients]
+[Creating the training set and test set for the labels "1"-"0"]
+[Dataset size]
+number of data instances (rows) = 211 
+number of features (columns) = 115 
+
+[Imbalance of this dataset]
+[class: 0  #elements = 104]
+49.289%
+[class: 1  #elements = 107]
+50.711%
+
+
+[Training the random forest classifier on the training set]
+
+[Applying the trained random forest classifier on the test set]
+
+PR AUC (integral) 	0.8388045
+ROC AUC 		0.8823529
+
+Brier score =  NA  (best value: 0; worst value: 1)
+
+TOTAL:
+
+ FN =  2  /  17 	 (truth == 1) & (prediction < threshold)
+ TP =  15  /  17 	 (truth == 1) & (prediction >= threshold)
+
+ FP =  12  /  36 	 (truth == 0) & (prediction >= threshold)
+ TN =  24  /  36 	 (truth == 0) & (prediction < threshold)
+
+
+
+ @@@ Test set @@@ 	MCC 	 F1_score 	accuracy 	TP_rate 	TN_rate 	PPV 		NPV 		PR AUC 	ROC AUC
+@@@ Test set @@@      0.513 	 0.682 	 	0.736 	 	0.882 	 	0.667		0.556	 	0.923	 	0.839	0.882
+
+
+
+
+=== final results ===
+Number of executions = 100
+                 MCC F1_score accuracy TP_rate TN_rate     PPV     NPV  PR_AUC
+nbr.val      100.000  100.000  100.000 100.000 100.000 100.000 100.000 100.000
+nbr.null       0.000    0.000    0.000   0.000   0.000   0.000   0.000   0.000
+nbr.na         0.000    0.000    0.000   0.000   0.000   0.000   0.000   0.000
+min            0.125    0.381    0.358   0.533   0.195   0.250   0.833   0.377
+max            0.824    0.889    0.906   1.000   0.927   0.800   1.000   0.953
+range          0.699    0.508    0.547   0.467   0.732   0.550   0.167   0.576
+sum           47.478   61.788   71.925  85.472  66.681  50.154  93.462  73.455
+median         0.460    0.615    0.736   0.857   0.695   0.485   0.931   0.754
+mean           0.475    0.618    0.719   0.855   0.667   0.502   0.935   0.735
+SE.mean        0.013    0.010    0.011   0.010   0.017   0.013   0.004   0.009
+CI.mean.0.95   0.026    0.020    0.022   0.020   0.034   0.026   0.008   0.019
+var            0.017    0.010    0.012   0.010   0.029   0.017   0.002   0.009
+std.dev        0.132    0.098    0.109   0.102   0.170   0.129   0.039   0.095
+coef.var       0.277    0.159    0.152   0.119   0.255   0.257   0.042   0.129
+             ROC_AUC
+nbr.val      100.000
+nbr.null       0.000
+nbr.na         0.000
+min            0.764
+max            0.980
+range          0.216
+sum           86.570
+median         0.867
+mean           0.866
+SE.mean        0.004
+CI.mean.0.95   0.009
+var            0.002
+std.dev        0.045
+coef.var       0.052
+
+
+=== === === ===
+          MCC F1_score accuracy TP_rate TN_rate   PPV   NPV PR_AUC ROC_AUC
+mean    0.475    0.618    0.719   0.855   0.667 0.502 0.935  0.735   0.866
+std.dev 0.132    0.098    0.109   0.102   0.170 0.129 0.039  0.095   0.045
+
+
+=== === === ===
+
+
+  [1] "age"                     "AKI"                    
+  [3] "Albumin"                 "ANC"                    
+  [5] "anemia"                  "APACH_II"               
+  [7] "aPTT"                    "bacteremia"             
+  [9] "BIPAP"                   "BUN"                    
+ [11] "cancer_status"           "cardiovasc"             
+ [13] "Cause_Ca_problem"        "Cause_Ca_related"       
+ [15] "Cause_detail_YUJ"        "Cause_Direct_coding_YUJ"
+ [17] "Cr"                      "CRP"                    
+ [19] "CRRT"                    "CTxinICU"               
+ [21] "Death"                   "Death_Cause"            
+ [23] "DischargefromICU"        "Distatntmets"           
+ [25] "DNR"                     "DNR_at_ICU"             
+ [27] "Dx"                      "dx_after_adm"           
+ [29] "ECMO"                    "GW_Death"               
+ [31] "Hb"                      "HD"                     
+ [33] "hemodynamic"             "HFNC"                   
+ [35] "highCr"                  "histologyNum"           
+ [37] "Hospital_death"          "hospital_LOS"           
+ [39] "hypoalbuminemia"         "ICU_cause_intensivist"  
+ [41] "ICU_Death"               "ICU_LOS"                
+ [43] "ICU_mortal30"            "ICUCPR"                 
+ [45] "ICUreadmission"          "ILD"                    
+ [47] "Intensivist"             "Ix"                     
+ [49] "K"                       "line"                   
+ [51] "MV"                      "MV_days"                
+ [53] "Na"                      "neurology"              
+ [55] "neutropenia"             "NewlyDx"                
+ [57] "Ninf"                    "NIV"                    
+ [59] "NIVMV"                   "NOVA"                   
+ [61] "other_malignancy"        "pallRT"                 
+ [63] "PaO2FiO2"                "PCC"                    
+ [65] "PDT"                     "performance_hospital_DC"
+ [67] "performance_ICU_DC"      "Planned"                
+ [69] "PLT"                     "Pneumonia"              
+ [71] "PoorPS"                  "post_dc_days"           
+ [73] "post_ICU_HD"             "post_icu_survival"      
+ [75] "post2011"                "postICUCPR"             
+ [77] "postICUCtx"              "postICURT"              
+ [79] "Pre_PS"                  "preICUDNR"              
+ [81] "prev_ccrt"               "prev_ctx"               
+ [83] "prev_gks"                "prev_op"                
+ [85] "prev_rtx"                "prev_wbrt"              
+ [87] "prevCPR"                 "PrevICUadm"             
+ [89] "procalcitonin"           "Procedure"              
+ [91] "procedure_related"       "PT_percent"             
+ [93] "pulmocomorbid"           "Refractory"             
+ [95] "respfailure"             "RRT"                    
+ [97] "SAPS_II"                 "sex"                    
+ [99] "smk_hx"                  "SOFA_D1"                
+[101] "StageNum"                "Steroid_ICU"            
+[103] "Surgery"                 "target"                 
+[105] "thrombocytopenia"        "timefromdx"             
+[107] "Tracheostomy"            "Txoff"                  
+[109] "Underlying_CV"           "Underlying_DM"          
+[111] "underlying_pulmo"        "Underlying_stroke"      
+[113] "Vasoactiveagent"         "WBC"                    
+[115] "WBRT"                   
+
+Total execution time: 6.959344 seconds
+0 days, 00 hours, 06 minutes, 57.56 seconds
+

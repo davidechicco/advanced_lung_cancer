@@ -259,7 +259,7 @@ for(exe_class_i in 1:execution_classification_number)
     patients_training_set_reduced_features <- patients_training_set[, c(selectedFeaturesNames, "target")]
     patients_test_set_reduced_features <- patients_test_set[, c(selectedFeaturesNames, "target")]
 
-    cat("\n[Training Random Forests classifier on the test set with only the top ", top_features_num ," features]\n")
+    cat("\n[Training Random Forests classifier on the training set with only the top ", top_features_num ," features]\n")
     rf_new <- NULL
     allFeaturesFormula <- as.formula(paste(as.factor("target"), '.', sep=' ~ ' ))
     patients_training_set_reduced_features$"target" <- as.factor(patients_training_set_reduced_features$"target")
