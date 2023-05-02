@@ -158,6 +158,8 @@ if(MISSING_DATA_IMPUTATION==TRUE){
     patients_data <- complete(imputed_data, NUM_DATASETS)
 }
 
+aggregateRankings <- NULL
+
 
 TRAINING_SET_RATIO <- 0.8
 TEST_SET_RATIO <- 1 - TRAINING_SET_RATIO
@@ -242,14 +244,24 @@ for(exe_class_i in 1:execution_classification_number)
     rownames(aggregateRankings) <- gsub(" ", "_", rownames(aggregateRankings))
     rownames(allExecutionsFinalRanking_mse_Gini) <- gsub(" ", "_", rownames(allExecutionsFinalRanking_mse_Gini))
 
+    aggregateRankings$"meanDecreaseAccuracyPosition" <- -1
+    aggregateRankings$"meanDecreaseGiniPosition" <- -1
+    aggregateRankings[order(-aggregateRankings$"MeanDecreaseAccuracy"),]$"meanDecreaseAccuracyPosition" <- seq(1:nrow(aggregateRankings))
+    aggregateRankings[order(-aggregateRankings$"MeanDecreaseGini"),]$"meanDecreaseGiniPosition" <- seq(1:nrow(aggregateRankings))
+
+    aggregateRankings$"aggregatedPosition" <- -1
+    aggregateRankings$"aggregatedPosition" <- aggregateRankings$"meanDecreaseAccuracyPosition" + aggregateRankings$"meanDecreaseGiniPosition"
+    
     
     # print(aggregateRankings[, c("finalPos", "MeanDecreaseAccuracy", "MeanDecreaseGini")])
 
-    print(allExecutionsFinalRanking_mse_Gini[order(-allExecutionsFinalRanking_mse_Gini["MeanDecreaseAccuracy"]), ])
+    print(aggregateRankings[order(aggregateRankings["aggregatedPosition"]), ])
+    # print(allExecutionsFinalRanking_mse_Gini[order(-allExecutionsFinalRanking_mse_Gini["MeanDecreaseAccuracy"]), ])
 
 
-    top_features_num <- 4
-    selectedFeaturesNames <- rownames((allExecutionsFinalRanking_mse_Gini[order(-allExecutionsFinalRanking_mse_Gini["MeanDecreaseAccuracy"]), ])[1:top_features_num,])
+    top_features_num <- 3
+    # selectedFeaturesNames <- rownames((allExecutionsFinalRanking_mse_Gini[order(-allExecutionsFinalRanking_mse_Gini["MeanDecreaseAccuracy"]), ])[1:top_features_num,])
+    selectedFeaturesNames <- rownames((aggregateRankings[order(aggregateRankings["aggregatedPosition"]), ])[1:top_features_num,])
 
     cat("number of selected top features: ", top_features_num, "\n", sep="")
     cat("selected top features: \n")
@@ -277,9 +289,10 @@ for(exe_class_i in 1:execution_classification_number)
     }
     
  }
+  
  
 cat("\n\n\n=== final results ===\n")
-cat("Number of executions = ", execution_number, "\n", sep="")
+cat("Number of executions = ", execution_classification_number, "\n", sep="")
 
 # statistics on the dataframe of confusion matrices
 statDescConfMatr <- stat.desc(confMatDataFrame)
@@ -291,3 +304,20 @@ cat("\n\n=== === === ===\n\n\n")
 
 
 computeExecutionTime()
+
+
+FEATURE_RANKING_PLOT_DEPICTION <- TRUE
+if (FEATURE_RANKING_PLOT_DEPICTION == TRUE) {
+    
+        # print(colnames(dd_sorted_IncNodePurity_only))
+
+        mkdirResultsCommand <- "mkdir -p ../results"
+        system(mkdirResultsCommand)
+        cat("applied command: ", mkdirResultsCommand, "\n", sep="")
+        x_upper_lim <- -1
+          
+         barPlotOfRanking(aggregateRankings, aggregateRankings$MeanDecreaseAccuracy, aggregateRankings$features, aggregateRankings$firstColPos, exe_num, "features", "MeanDecreaseAccuracy", x_upper_lim)
+         
+         barPlotOfRanking(aggregateRankings, aggregateRankings$MeanDecreaseGini, aggregateRankings$features, aggregateRankings$secondColPos, exe_num, "features", "MeanDecreaseGini", x_upper_lim)
+            
+}
