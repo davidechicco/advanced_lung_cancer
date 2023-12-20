@@ -110,6 +110,34 @@ patients_data$"admission_via" <-NULL
 patients_data$"Underlying_etc" <-NULL
 
 
+# removed features because of absent documentation
+patients_data$"cancer_status" <- NULL
+patients_data$"Cause_Ca_related" <- NULL
+patients_data$"Cr" <- NULL
+patients_data$"Death" <- NULL
+patients_data$"Dx" <- NULL
+patients_data$"GW_Death" <- NULL
+patients_data$"hemodynamic" <- NULL
+patients_data$"highCr" <- NULL
+patients_data$"Ix" <- NULL
+patients_data$"K" <- NULL
+patients_data$"line" <- NULL
+patients_data$"Na" <- NULL
+patients_data$"Ninf" <- NULL
+patients_data$"NIV" <- NULL
+patients_data$"NIVMV" <- NULL
+patients_data$"NOVA" <- NULL
+patients_data$"pallRT" <- NULL
+patients_data$"Planned" <- NULL
+patients_data$"post_ICU_HD" <- NULL
+patients_data$"prev_op" <- NULL
+patients_data$"Procedure" <- NULL
+patients_data$"procedure_related" <- NULL
+patients_data$"Steroid_ICU" <- NULL
+patients_data$"Txoff" <- NULL
+
+
+
 
 patients_data$"StageNum" <- -1
 patients_data[patients_data$"Stage" == "ED",]$"StageNum" <- 5
@@ -173,7 +201,7 @@ allExecutionsFinalRanking <- data.frame(Doubles=double(),
                  stringsAsFactors=FALSE)
                  
 
-execution_classification_number <- 20 # 100
+execution_classification_number <- 100 # 100
 
 cat("Number of classification executions = ", execution_classification_number, "\t", sep="")
 for(exe_class_i in 1:execution_classification_number)
@@ -190,39 +218,39 @@ for(exe_class_i in 1:execution_classification_number)
     patients_test_set <- patients_data[patients_test_set_index_start:patients_test_set_index_end,]
 
     execution_FS_number <- 100
-    cat("Number of FS executions = ", execution_FS_number, "\n", sep="")
+    cat("Number of feature selection executions = ", execution_FS_number, "\n", sep="")
     for(exe_fs_i in 1:execution_FS_number)
     {
 
-	cat("\n\n\n Execution number FS = ", exe_fs_i, " & classif =  ", exe_class_i,"\n", sep="")
-	cat("[Randomizing the rows]\n")
-	patients_training_set <- patients_training_set[sample(nrow(patients_training_set)),] # shuffle the rows
+        cat("\n\n\n Execution number feature selection = ", exe_fs_i, " & classif =  ", exe_class_i,"\n", sep="")
+        cat("[Randomizing the rows]\n")
+        patients_training_set <- patients_training_set[sample(nrow(patients_training_set)),] # shuffle the rows
 
 
-	cat("application of randomForest()\n")
-	rf_output <- randomForest(as.factor(patients_training_set$target) ~ ., data=patients_training_set, importance=TRUE, proximity=TRUE)
-	    
+        cat("application of randomForest()\n")
+        rf_output <- randomForest(as.factor(patients_training_set$target) ~ ., data=patients_training_set, importance=TRUE, proximity=TRUE)
+            
 
-	dd <- as.data.frame(rf_output$importance);
-	
-	mergedRankingGeneralRank <- agregateTwoSortedRankings(dd, "MeanDecreaseAccuracy", "MeanDecreaseGini")
-	
-	rownames(mergedRankingGeneralRank) <- (removeDot(removeUnderscore(rownames(mergedRankingGeneralRank))))
-	mergedRankingGeneralRank$features <- removeDot(removeUnderscore(mergedRankingGeneralRank$features))
+        dd <- as.data.frame(rf_output$importance);
+        
+        mergedRankingGeneralRank <- agregateTwoSortedRankings(dd, "MeanDecreaseAccuracy", "MeanDecreaseGini")
+        
+        rownames(mergedRankingGeneralRank) <- (removeDot(removeUnderscore(rownames(mergedRankingGeneralRank))))
+        mergedRankingGeneralRank$features <- removeDot(removeUnderscore(mergedRankingGeneralRank$features))
 
-	print(mergedRankingGeneralRank[, c("finalPos", "MeanDecreaseAccuracy", "MeanDecreaseGini"), drop=FALSE])
+        print(mergedRankingGeneralRank[, c("finalPos", "MeanDecreaseAccuracy", "MeanDecreaseGini"), drop=FALSE])
 
-	finalRankingOneExecution <- mergedRankingGeneralRank[, c("features", "finalPos", "MeanDecreaseAccuracy", "MeanDecreaseGini"), drop=FALSE]
-	finalRankingOneExecutionAlphaBeta <- finalRankingOneExecution[order(finalRankingOneExecution$"features"), , drop=FALSE]
+        finalRankingOneExecution <- mergedRankingGeneralRank[, c("features", "finalPos", "MeanDecreaseAccuracy", "MeanDecreaseGini"), drop=FALSE]
+        finalRankingOneExecutionAlphaBeta <- finalRankingOneExecution[order(finalRankingOneExecution$"features"), , drop=FALSE]
 
-	if (exe_fs_i == 1) {
-	    allExecutionsFinalRanking <- finalRankingOneExecutionAlphaBeta
-	} else {
-	    
-	    allExecutionsFinalRanking$MeanDecreaseAccuracy <- allExecutionsFinalRanking$MeanDecreaseAccuracy + finalRankingOneExecutionAlphaBeta$MeanDecreaseAccuracy
-	    allExecutionsFinalRanking$MeanDecreaseGini <- allExecutionsFinalRanking$MeanDecreaseGini + finalRankingOneExecutionAlphaBeta$MeanDecreaseGini
-	    allExecutionsFinalRanking$finalPos <- allExecutionsFinalRanking$finalPos + finalRankingOneExecutionAlphaBeta$finalPos
-	}
+        if (exe_fs_i == 1) {
+            allExecutionsFinalRanking <- finalRankingOneExecutionAlphaBeta
+        } else {
+            
+            allExecutionsFinalRanking$MeanDecreaseAccuracy <- allExecutionsFinalRanking$MeanDecreaseAccuracy + finalRankingOneExecutionAlphaBeta$MeanDecreaseAccuracy
+            allExecutionsFinalRanking$MeanDecreaseGini <- allExecutionsFinalRanking$MeanDecreaseGini + finalRankingOneExecutionAlphaBeta$MeanDecreaseGini
+            allExecutionsFinalRanking$finalPos <- allExecutionsFinalRanking$finalPos + finalRankingOneExecutionAlphaBeta$finalPos
+        }
     }
 
 
@@ -311,13 +339,14 @@ if (FEATURE_RANKING_PLOT_DEPICTION == TRUE) {
     
         # print(colnames(dd_sorted_IncNodePurity_only))
 
-        mkdirResultsCommand <- "mkdir -p ../results"
+        folder <- "../results"
+        mkdirResultsCommand <- paste0("mkdir -p ", folder)
         system(mkdirResultsCommand)
         cat("applied command: ", mkdirResultsCommand, "\n", sep="")
         x_upper_lim <- -1
           
-         barPlotOfRanking(aggregateRankings, aggregateRankings$MeanDecreaseAccuracy, aggregateRankings$features, aggregateRankings$firstColPos, exe_num, "features", "MeanDecreaseAccuracy", x_upper_lim)
+         barPlotOfRanking(aggregateRankings, aggregateRankings$MeanDecreaseAccuracy, aggregateRankings$features, aggregateRankings$firstColPos, exe_num, "features", "MeanDecreaseAccuracy", x_upper_lim, folder)
          
-         barPlotOfRanking(aggregateRankings, aggregateRankings$MeanDecreaseGini, aggregateRankings$features, aggregateRankings$secondColPos, exe_num, "features", "MeanDecreaseGini", x_upper_lim)
+         barPlotOfRanking(aggregateRankings, aggregateRankings$MeanDecreaseGini, aggregateRankings$features, aggregateRankings$secondColPos, exe_num, "features", "MeanDecreaseGini", x_upper_lim, folder)
             
 }
