@@ -3,7 +3,15 @@ options(stringsAsFactors = FALSE)
 cat("\014")
 # set.seed(11)
 
-rankingFile <- "../results/feature_ranking_RF_results00.csv"
+
+
+
+num_to_return <- 1
+upper_num_limit <- 100000
+exe_num <- sample(1:upper_num_limit, num_to_return)
+
+
+rankingFile <- paste0("../results/feature_ranking_RF_results", exe_num, ".csv")
 aggregateRankings <- read.csv(rankingFile, header = TRUE, sep =",");
 cat("Read data from file ", rankingFile, "\n", sep="")
 

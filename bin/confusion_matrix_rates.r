@@ -1,12 +1,12 @@
 options(stringsAsFactors = FALSE)
 # library("clusterSim")
 
-list.of.packages <- c("easypackages", "PRROC", "e1071", "Metrics", "MLmetrics", "rcompanion", "irr" )
+list.of.packages <- c("PRROC", "e1071", "Metrics", "MLmetrics", "rcompanion", "irr" )
 # new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
 # if(length(new.packages)) install.packages(new.packages, repos='http://cran.us.r-project.org')
 
-library("easypackages")
-libraries(list.of.packages)
+library("pacman")
+p_load(list.of.packages, character.only = TRUE)
 # script_dir <- dirname(sys.frame(1)$ofile)
 # cat("script_dir: ", script_dir, "\n", sep="")
 source("utils.r")

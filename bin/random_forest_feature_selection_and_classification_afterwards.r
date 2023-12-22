@@ -1,7 +1,7 @@
 setwd(".")
 options(stringsAsFactors = FALSE)
 cat("\014")
-set.seed(11)
+# set.seed(11)
 
 # agregateTwoSortedRankings
 agregateTwoSortedRankings <- function(dd, firstColumnName, secondColumnName) {
@@ -53,16 +53,18 @@ agregateTwoSortedRankings <- function(dd, firstColumnName, secondColumnName) {
 }
 
 
-# EXP_ARG_NUM <- 2
-# 
-# args = commandArgs(trailingOnly=TRUE)
-# if (length(args)<EXP_ARG_NUM) {
-#   stop("At least two argument must be supplied (input files)", call.=FALSE)
-# } else {
-#   # default output file
-#   fileNameData <- args[1]
-#   targetName <- args[2]
-# }
+EXP_ARG_NUM <- 1
+
+args = commandArgs(trailingOnly=TRUE)
+if (length(args)<EXP_ARG_NUM) {
+  stop("At least one argument must be supplied (input files)", call.=FALSE)
+} else {
+  # default output file
+  TOP_FEATURES_NUMBER <- args[1]
+}
+
+
+cat("TOP_FEATURES_NUMBER = ", TOP_FEATURES_NUMBER, "\n", sep="")
 
 threshold <- 0.5
 
@@ -71,13 +73,14 @@ targetName <- "Sepsis"
 
 
 MISSING_DATA_IMPUTATION <- TRUE
+TRAIN_SET_OVERSAMPLING_SYNTHETIC <- TRUE
 
 list.of.packages <- c("pacman")
 new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
 if(length(new.packages)) install.packages(new.packages)
 
 library("pacman")
-pacman::p_load("randomForest", "ggplot2", "dplyr", "pastecs",  "mice")
+pacman::p_load("randomForest", "ggplot2", "dplyr", "pastecs",  "mice", "ROSE")
 
 source("./confusion_matrix_rates.r")
 source("./utils.r")
@@ -96,6 +99,7 @@ cat("Read data from file ", fileNameData, "\n", sep="")
 
 patients_data$"Histology_coding" <- NULL
 patients_data$"Cause_Direct" <- NULL	
+patients_data$"Cause_detail_YUJ" <- NULL
 patients_data$"Cause_analysis" <- NULL
 patients_data$"MICU_Cause_explain" <- NULL
 patients_data$"culture_result" <- NULL
@@ -189,9 +193,10 @@ if(MISSING_DATA_IMPUTATION==TRUE){
 aggregateRankings <- NULL
 
 
-TRAINING_SET_RATIO <- 0.8
+TRAINING_SET_RATIO <- 0.7
 TEST_SET_RATIO <- 1 - TRAINING_SET_RATIO
 
+cat("TRAINING_SET_RATIO = ", TRAINING_SET_RATIO, "\n", sep="")
 
 allExecutionsFinalRanking <- data.frame(Doubles=double(),
                  Ints=integer(),
@@ -287,7 +292,7 @@ for(exe_class_i in 1:execution_classification_number)
     # print(allExecutionsFinalRanking_mse_Gini[order(-allExecutionsFinalRanking_mse_Gini["MeanDecreaseAccuracy"]), ])
 
 
-    top_features_num <- 3
+    top_features_num <- TOP_FEATURES_NUMBER
     # selectedFeaturesNames <- rownames((allExecutionsFinalRanking_mse_Gini[order(-allExecutionsFinalRanking_mse_Gini["MeanDecreaseAccuracy"]), ])[1:top_features_num,])
     selectedFeaturesNames <- rownames((aggregateRankings[order(aggregateRankings["aggregatedPosition"]), ])[1:top_features_num,])
 
@@ -298,6 +303,22 @@ for(exe_class_i in 1:execution_classification_number)
 
     patients_training_set_reduced_features <- patients_training_set[, c(selectedFeaturesNames, "target")]
     patients_test_set_reduced_features <- patients_test_set[, c(selectedFeaturesNames, "target")]
+
+    # Allocation of the training set and of the test set
+    training_set_with_target <- patients_training_set_reduced_features
+    this_target_index <- training_set_with_target %>% ncol()
+
+	  # formula
+	  allFeaturesFormula <- as.formula(paste(as.factor(colnames(patients_training_set_reduced_features)[this_target_index]), '.', sep=' ~ ' ))
+	  if(TRAIN_SET_OVERSAMPLING_SYNTHETIC == TRUE)
+	      {
+		  thisP <- 0.5
+
+          cat("ROSE oversampling\n")
+		  data.rose <- ROSE(allFeaturesFormula, data = training_set_with_target, p=thisP, seed = 1)$data
+	      }
+
+    patients_training_set_reduced_features <- data.rose
 
     cat("\n[Training Random Forests classifier on the training set with only the top ", top_features_num ," features]\n")
     rf_new <- NULL
@@ -339,7 +360,7 @@ if (FEATURE_RANKING_PLOT_DEPICTION == TRUE) {
     
         # print(colnames(dd_sorted_IncNodePurity_only))
 
-        folder <- "../results"
+        folder <- "../results/"
         mkdirResultsCommand <- paste0("mkdir -p ", folder)
         system(mkdirResultsCommand)
         cat("applied command: ", mkdirResultsCommand, "\n", sep="")

@@ -25,12 +25,13 @@ fromStringToNumeric <- function(x_array) {
 datasetFileName <- "/home/davide/projects/heart-failure-gene-expression-analysis/temp/STEMI_patients_data_heart_failure_without_controls9013975_dim10red_657327508.csv"
 targetName <- "added_diagnosis"
 
-list.of.packages <- c("easypackages", "dplyr")
+list.of.packages <- c("dplyr")
 new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
 if(length(new.packages)) install.packages(new.packages)
 
-library("easypackages")
-libraries(list.of.packages)
+library("pacman")
+p_load(list.of.packages, character.only = TRUE)
+
 
 
 num_to_return <- 1
