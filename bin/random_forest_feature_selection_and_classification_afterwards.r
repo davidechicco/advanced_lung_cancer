@@ -36,10 +36,13 @@ agregateTwoSortedRankings <- function(dd, firstColumnName, secondColumnName) {
     cat("\ncbind()\n")
     mergedRanking <- cbind(dd_sorted_firstColumn_only, dd_sorted_secondColumn_only)
 
+    
     mergedRankingAlphaBeta <- mergedRanking[order(mergedRanking$"features"), ]
     mergedRankingAlphaBeta$posSum <- mergedRankingAlphaBeta$firstColPos + mergedRankingAlphaBeta$secondColPos
 
+    cat("before order()\n")
     mergedRankingGeneralRank <- mergedRankingAlphaBeta[order(mergedRankingAlphaBeta$"posSum"), ]
+    cat("after order()\n")
     mergedRankingGeneralRank$finalPos <- c(1:dim(mergedRankingGeneralRank)[1])
     
     # remove duplicate columns
@@ -63,6 +66,7 @@ if (length(args)<EXP_ARG_NUM) {
   TOP_FEATURES_NUMBER <- args[1]
 }
 
+# TOP_FEATURES_NUMBER <- 3
 
 cat("TOP_FEATURES_NUMBER = ", TOP_FEATURES_NUMBER, "\n", sep="")
 
@@ -242,7 +246,7 @@ for(exe_class_i in 1:execution_classification_number)
         
         rownames(mergedRankingGeneralRank) <- (removeDot(removeUnderscore(rownames(mergedRankingGeneralRank))))
         mergedRankingGeneralRank$features <- removeDot(removeUnderscore(mergedRankingGeneralRank$features))
-
+        
         print(mergedRankingGeneralRank[, c("finalPos", "MeanDecreaseAccuracy", "MeanDecreaseGini"), drop=FALSE])
 
         finalRankingOneExecution <- mergedRankingGeneralRank[, c("features", "finalPos", "MeanDecreaseAccuracy", "MeanDecreaseGini"), drop=FALSE]
@@ -288,13 +292,15 @@ for(exe_class_i in 1:execution_classification_number)
     
     # print(aggregateRankings[, c("finalPos", "MeanDecreaseAccuracy", "MeanDecreaseGini")])
 
-    print(aggregateRankings[order(aggregateRankings["aggregatedPosition"]), ])
+    print(aggregateRankings[order(aggregateRankings$"aggregatedPosition"), ])
     # print(allExecutionsFinalRanking_mse_Gini[order(-allExecutionsFinalRanking_mse_Gini["MeanDecreaseAccuracy"]), ])
 
 
     top_features_num <- TOP_FEATURES_NUMBER
     # selectedFeaturesNames <- rownames((allExecutionsFinalRanking_mse_Gini[order(-allExecutionsFinalRanking_mse_Gini["MeanDecreaseAccuracy"]), ])[1:top_features_num,])
-    selectedFeaturesNames <- rownames((aggregateRankings[order(aggregateRankings["aggregatedPosition"]), ])[1:top_features_num,])
+    # selectedFeaturesNames <- rownames((aggregateRankings[order(aggregateRankings["aggregatedPosition"]), ])[1:top_features_num,])
+    selectedFeaturesNames <- rownames((aggregateRankings[order(aggregateRankings$"aggregatedPosition"), ])[1:top_features_num,])
+
 
     cat("number of selected top features: ", top_features_num, "\n", sep="")
     cat("selected top features: \n")
