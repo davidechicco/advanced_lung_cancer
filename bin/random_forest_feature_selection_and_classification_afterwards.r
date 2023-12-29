@@ -1,12 +1,12 @@
 setwd(".")
 options(stringsAsFactors = FALSE)
 cat("\014")
-# set.seed(11)
+set.seed(12)
 
 # agregateTwoSortedRankings
 agregateTwoSortedRankings <- function(dd, firstColumnName, secondColumnName) {
 
-    cat("\n[function agregateTwoSortedRankings()]\n")
+    cat("[function agregateTwoSortedRankings()]\n")
 
     # dd_sorted_MSE <- dd[order(-dd$firstColumnName), ]
     dd_sorted_firstColumn <- dd[order(-dd[[firstColumnName]]), ]
@@ -32,17 +32,12 @@ agregateTwoSortedRankings <- function(dd, firstColumnName, secondColumnName) {
     dd_sorted_firstColumn_only <- dd_sorted_firstColumn_only[order(dd_sorted_firstColumn_only$"features"), ]
     dd_sorted_secondColumn_only <- dd_sorted_secondColumn_only[order(dd_sorted_secondColumn_only$"features"), ]
     
-    
-    cat("\ncbind()\n")
     mergedRanking <- cbind(dd_sorted_firstColumn_only, dd_sorted_secondColumn_only)
 
-    
     mergedRankingAlphaBeta <- mergedRanking[order(mergedRanking$"features"), ]
     mergedRankingAlphaBeta$posSum <- mergedRankingAlphaBeta$firstColPos + mergedRankingAlphaBeta$secondColPos
 
-    cat("before order()\n")
     mergedRankingGeneralRank <- mergedRankingAlphaBeta[order(mergedRankingAlphaBeta$"posSum"), ]
-    cat("after order()\n")
     mergedRankingGeneralRank$finalPos <- c(1:dim(mergedRankingGeneralRank)[1])
     
     # remove duplicate columns
@@ -56,28 +51,38 @@ agregateTwoSortedRankings <- function(dd, firstColumnName, secondColumnName) {
 }
 
 
-EXP_ARG_NUM <- 1
+EXP_ARG_NUM <- 2
 
 args = commandArgs(trailingOnly=TRUE)
 if (length(args)<EXP_ARG_NUM) {
   stop("At least one argument must be supplied (input files)", call.=FALSE)
 } else {
   # default output file
-  TOP_FEATURES_NUMBER <- args[1]
+  TOP_FEATURES_NUMBER <- as.numeric(args[1])
+  NUM_ITERATIONS <- as.numeric(args[2])
 }
 
 # TOP_FEATURES_NUMBER <- 3
 
 cat("TOP_FEATURES_NUMBER = ", TOP_FEATURES_NUMBER, "\n", sep="")
+cat("NUM_ITERATIONS = ", NUM_ITERATIONS, "\n", sep="")
+
+execution_FS_number <- NUM_ITERATIONS
+execution_classification_number <- NUM_ITERATIONS # 100
+
 
 threshold <- 0.5
+pROSE <- 0.4
 
-fileNameData <- "../data/pone0210951_s006_dataset_EDITED.csv"
+# fileNameData <- "../data/pone0210951_s006_dataset_EDITED.csv"
+fileNameData <- "../data/pone0210951_s006_dataset_EDITED_IMPUTED.csv"
 targetName <- "Sepsis"
 
 
-MISSING_DATA_IMPUTATION <- TRUE
-TRAIN_SET_OVERSAMPLING_SYNTHETIC <- TRUE
+MISSING_DATA_IMPUTATION <- FALSE
+TRAIN_SET_OVERSAMPLING_SYNTHETIC <- FALSE
+
+if(TRAIN_SET_OVERSAMPLING_SYNTHETIC == FALSE) cat("TRAIN_SET_OVERSAMPLING_SYNTHETIC == FALSE\n")
 
 list.of.packages <- c("pacman")
 new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
@@ -121,6 +126,7 @@ patients_data$"Underlying_etc" <-NULL
 # removed features because of absent documentation
 patients_data$"cancer_status" <- NULL
 patients_data$"Cause_Ca_related" <- NULL
+patients_data$"Cause_Direct_coding_YUJ" <- NULL
 patients_data$"Cr" <- NULL
 patients_data$"Death" <- NULL
 patients_data$"Dx" <- NULL
@@ -197,7 +203,7 @@ if(MISSING_DATA_IMPUTATION==TRUE){
 aggregateRankings <- NULL
 
 
-TRAINING_SET_RATIO <- 0.7
+TRAINING_SET_RATIO <- 0.9
 TEST_SET_RATIO <- 1 - TRAINING_SET_RATIO
 
 cat("TRAINING_SET_RATIO = ", TRAINING_SET_RATIO, "\n", sep="")
@@ -210,7 +216,6 @@ allExecutionsFinalRanking <- data.frame(Doubles=double(),
                  stringsAsFactors=FALSE)
                  
 
-execution_classification_number <- 100 # 100
 
 cat("Number of classification executions = ", execution_classification_number, "\t", sep="")
 for(exe_class_i in 1:execution_classification_number)
@@ -226,7 +231,6 @@ for(exe_class_i in 1:execution_classification_number)
     patients_training_set <- patients_data[patients_training_set_index_start:patients_training_set_index_end,]
     patients_test_set <- patients_data[patients_test_set_index_start:patients_test_set_index_end,]
 
-    execution_FS_number <- 100
     cat("Number of feature selection executions = ", execution_FS_number, "\n", sep="")
     for(exe_fs_i in 1:execution_FS_number)
     {
@@ -235,19 +239,31 @@ for(exe_class_i in 1:execution_classification_number)
         cat("[Randomizing the rows]\n")
         patients_training_set <- patients_training_set[sample(nrow(patients_training_set)),] # shuffle the rows
 
+        this_target_index <- patients_training_set %>% ncol()
+
+        
+        # formula
+        allFeaturesFormula <- as.formula(paste(as.factor(colnames(patients_training_set)[this_target_index]), '.', sep=' ~ ' ))
+        if(TRAIN_SET_OVERSAMPLING_SYNTHETIC == TRUE)
+            {
+                thisP <- pROSE
+
+                cat("ROSE oversampling\n")
+                data.rose <- ROSE(allFeaturesFormula, data = patients_training_set, p=thisP, seed = 1)$data
+                patients_training_set <- data.rose
+            }
 
         cat("application of randomForest()\n")
         rf_output <- randomForest(as.factor(patients_training_set$target) ~ ., data=patients_training_set, importance=TRUE, proximity=TRUE)
             
 
         dd <- as.data.frame(rf_output$importance);
-        
         mergedRankingGeneralRank <- agregateTwoSortedRankings(dd, "MeanDecreaseAccuracy", "MeanDecreaseGini")
         
         rownames(mergedRankingGeneralRank) <- (removeDot(removeUnderscore(rownames(mergedRankingGeneralRank))))
         mergedRankingGeneralRank$features <- removeDot(removeUnderscore(mergedRankingGeneralRank$features))
         
-        print(mergedRankingGeneralRank[, c("finalPos", "MeanDecreaseAccuracy", "MeanDecreaseGini"), drop=FALSE])
+        # print(mergedRankingGeneralRank[, c("finalPos", "MeanDecreaseAccuracy", "MeanDecreaseGini"), drop=FALSE])
 
         finalRankingOneExecution <- mergedRankingGeneralRank[, c("features", "finalPos", "MeanDecreaseAccuracy", "MeanDecreaseGini"), drop=FALSE]
         finalRankingOneExecutionAlphaBeta <- finalRankingOneExecution[order(finalRankingOneExecution$"features"), , drop=FALSE]
@@ -314,17 +330,16 @@ for(exe_class_i in 1:execution_classification_number)
     training_set_with_target <- patients_training_set_reduced_features
     this_target_index <- training_set_with_target %>% ncol()
 
-	  # formula
-	  allFeaturesFormula <- as.formula(paste(as.factor(colnames(patients_training_set_reduced_features)[this_target_index]), '.', sep=' ~ ' ))
+    # formula
+    allFeaturesFormula <- as.formula(paste(as.factor(colnames(patients_training_set_reduced_features)[this_target_index]), '.', sep=' ~ ' ))
 	  if(TRAIN_SET_OVERSAMPLING_SYNTHETIC == TRUE)
 	      {
-		  thisP <- 0.5
+		  thisP <- pROSE
 
           cat("ROSE oversampling\n")
 		  data.rose <- ROSE(allFeaturesFormula, data = training_set_with_target, p=thisP, seed = 1)$data
+          patients_training_set_reduced_features <- data.rose
 	      }
-
-    patients_training_set_reduced_features <- data.rose
 
     cat("\n[Training Random Forests classifier on the training set with only the top ", top_features_num ," features]\n")
     rf_new <- NULL
@@ -361,6 +376,10 @@ cat("\n\n=== === === ===\n\n\n")
 computeExecutionTime()
 
 
+numberOfFeaturesToPlot <- 20
+cat("We'll plot only the top ", numberOfFeaturesToPlot, " features\n", sep="")
+theseAggregateRankings <- aggregateRankings[(1:numberOfFeaturesToPlot),]
+
 FEATURE_RANKING_PLOT_DEPICTION <- TRUE
 if (FEATURE_RANKING_PLOT_DEPICTION == TRUE) {
     
@@ -372,8 +391,8 @@ if (FEATURE_RANKING_PLOT_DEPICTION == TRUE) {
         cat("applied command: ", mkdirResultsCommand, "\n", sep="")
         x_upper_lim <- -1
           
-         barPlotOfRanking(aggregateRankings, aggregateRankings$MeanDecreaseAccuracy, aggregateRankings$features, aggregateRankings$firstColPos, exe_num, "features", "MeanDecreaseAccuracy", x_upper_lim, folder)
+         barPlotOfRanking(theseAggregateRankings, theseAggregateRankings$MeanDecreaseAccuracy, theseAggregateRankings$features, theseAggregateRankings$firstColPos, exe_num, "features", "MeanDecreaseAccuracy", x_upper_lim, folder)
          
-         barPlotOfRanking(aggregateRankings, aggregateRankings$MeanDecreaseGini, aggregateRankings$features, aggregateRankings$secondColPos, exe_num, "features", "MeanDecreaseGini", x_upper_lim, folder)
+         barPlotOfRanking(theseAggregateRankings, theseAggregateRankings$MeanDecreaseGini, theseAggregateRankings$features, theseAggregateRankings$secondColPos, exe_num, "features", "MeanDecreaseGini", x_upper_lim, folder)
             
 }

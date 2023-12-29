@@ -3,17 +3,16 @@ options(stringsAsFactors = FALSE)
 cat("\014")
 set.seed(12)
 
-EXP_ARG_NUM <- 2
-
-TRAIN_SET_OVERSAMPLING_SYNTHETIC <- TRUE
+TRAIN_SET_OVERSAMPLING_SYNTHETIC <- FALSE
 
 threshold <- 0.5
 
-fileNameData <- "../data/pone0210951_s006_dataset_EDITED.csv"
+# fileNameData <- "../data/pone0210951_s006_dataset_EDITED.csv"
+fileNameData <- "../data/pone0210951_s006_dataset_EDITED_IMPUTED.csv"
 targetName <- "Sepsis"
 
-
-MISSING_DATA_IMPUTATION <- TRUE
+execution_number <- 100
+MISSING_DATA_IMPUTATION <- FALSE
 
 list.of.packages <- c("pacman")
 new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
@@ -38,6 +37,7 @@ cat("Read data from file ", fileNameData, "\n", sep="")
 
 patients_data$"Histology_coding" <- NULL
 patients_data$"Cause_Direct" <- NULL	
+patients_data$"Cause_detail_YUJ" <- NULL
 patients_data$"Cause_analysis" <- NULL
 patients_data$"MICU_Cause_explain" <- NULL
 patients_data$"culture_result" <- NULL
@@ -52,12 +52,40 @@ patients_data$"admission_via" <-NULL
 patients_data$"Underlying_etc" <-NULL
 
 
+# removed features because of absent documentation
+patients_data$"cancer_status" <- NULL
+patients_data$"Cause_Ca_related" <- NULL
+patients_data$"Cause_Direct_coding_YUJ" <- NULL
+patients_data$"Cr" <- NULL
+patients_data$"Death" <- NULL
+patients_data$"Dx" <- NULL
+patients_data$"GW_Death" <- NULL
+patients_data$"hemodynamic" <- NULL
+patients_data$"highCr" <- NULL
+patients_data$"Ix" <- NULL
+patients_data$"K" <- NULL
+patients_data$"line" <- NULL
+patients_data$"Na" <- NULL
+patients_data$"Ninf" <- NULL
+patients_data$"NIV" <- NULL
+patients_data$"NIVMV" <- NULL
+patients_data$"NOVA" <- NULL
+patients_data$"pallRT" <- NULL
+patients_data$"Planned" <- NULL
+patients_data$"post_ICU_HD" <- NULL
+patients_data$"prev_op" <- NULL
+patients_data$"Procedure" <- NULL
+patients_data$"procedure_related" <- NULL
+patients_data$"Steroid_ICU" <- NULL
+patients_data$"Txoff" <- NULL
+
+
 
 
 patients_data$"StageNum" <- -1
-patients_data[which(patients_data$"Stage" == "ED"),]$"StageNum" <- 5
-patients_data[which(patients_data$"Stage" == "IIIB"),]$"StageNum" <- 3
-patients_data[which(patients_data$"Stage" == "IV"),]$"StageNum" <- 4
+patients_data[patients_data$"Stage" == "ED",]$"StageNum" <- 5
+patients_data[patients_data$"Stage" == "IIIB",]$"StageNum" <- 3
+patients_data[patients_data$"Stage" == "IV",]$"StageNum" <- 4
 patients_data$"Stage" <- NULL
 
 patients_data$"histology" %>% unique() %>% sort() %>% cat("\n", sep="\n")
@@ -79,6 +107,7 @@ patients_data <- patients_data %>% select(order(colnames(patients_data)))
 
 names(patients_data)[names(patients_data) == targetName] <- "target"
 cat("The target feature is ", targetName, "\n", sep="")
+
 
 cat("application of dplyr::select()\n")
 patients_data <- patients_data%>%dplyr::select(-target,target)
@@ -108,7 +137,7 @@ allFeaturesFormula <- as.formula(paste(as.factor(colnames(patients_data)[target_
 
 # cycle of executions
 
-execution_number <- 100
+
 cat("Number of executions = ", execution_number, "\n", sep="")
 for(exe_i in 1:execution_number)
 {
@@ -134,7 +163,7 @@ for(exe_i in 1:execution_number)
     dataset_dim_retriever(patients_data)
     imbalance_retriever(patients_data[,target_index])
 
-    training_set_perc <- 80
+    training_set_perc <- 90
     INPUT_PERC_POS <- 50
     cat("[training set = ", training_set_perc,"%]\n", sep="")
     cat("[test set = ", (100-training_set_perc),"%]\n", sep="")
