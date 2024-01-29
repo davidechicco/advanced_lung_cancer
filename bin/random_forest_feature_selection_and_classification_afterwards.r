@@ -2,6 +2,8 @@ setwd(".")
 options(stringsAsFactors = FALSE)
 cat("\014")
 set.seed(12)
+options(repos = list(CRAN="http://cran.rstudio.com/"))
+
 
 # agregateTwoSortedRankings
 agregateTwoSortedRankings <- function(dd, firstColumnName, secondColumnName) {
@@ -72,7 +74,7 @@ execution_classification_number <- NUM_ITERATIONS # 100
 
 
 threshold <- 0.5
-pROSE <- 0.4
+pROSE <- 0.55
 
 # fileNameData <- "../data/pone0210951_s006_dataset_EDITED.csv"
 fileNameData <- "../data/pone0210951_s006_dataset_EDITED_IMPUTED.csv"
@@ -80,16 +82,18 @@ targetName <- "Sepsis"
 
 
 MISSING_DATA_IMPUTATION <- FALSE
-TRAIN_SET_OVERSAMPLING_SYNTHETIC <- FALSE
+TRAIN_SET_OVERSAMPLING_SYNTHETIC_ROSE <- FALSE
 
-if(TRAIN_SET_OVERSAMPLING_SYNTHETIC == FALSE) cat("TRAIN_SET_OVERSAMPLING_SYNTHETIC == FALSE\n")
+if(TRAIN_SET_OVERSAMPLING_SYNTHETIC_ROSE == FALSE) cat("TRAIN_SET_OVERSAMPLING_SYNTHETIC_ROSE == FALSE\n")
+
+TRAIN_SET_OVERSAMPLING_SYNTHETIC_SMOTE <- TRUE
 
 list.of.packages <- c("pacman")
 new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
 if(length(new.packages)) install.packages(new.packages)
 
 library("pacman")
-pacman::p_load("randomForest", "ggplot2", "dplyr", "pastecs",  "mice", "ROSE")
+pacman::p_load("randomForest", "ggplot2", "dplyr", "pastecs",  "mice", "ROSE", "DMwR")
 
 source("./confusion_matrix_rates.r")
 source("./utils.r")
@@ -188,6 +192,7 @@ num_to_return <- 1
 upper_num_limit <- 100000
 exe_num <- sample(1:upper_num_limit, num_to_return)
 
+imbal_number <- 126
 
 # patients_data$"HCV.RNATaqman.Log.IU.ml." <- as.numeric(patients_data$"HCV.RNATaqman.Log.IU.ml.")
 
@@ -244,14 +249,27 @@ for(exe_class_i in 1:execution_classification_number)
         
         # formula
         allFeaturesFormula <- as.formula(paste(as.factor(colnames(patients_training_set)[this_target_index]), '.', sep=' ~ ' ))
-        if(TRAIN_SET_OVERSAMPLING_SYNTHETIC == TRUE)
+        if(TRAIN_SET_OVERSAMPLING_SYNTHETIC_ROSE == TRUE)
             {
-                thisP <- pROSE
-
                 cat("ROSE oversampling\n")
-                data.rose <- ROSE(allFeaturesFormula, data = patients_training_set, p=thisP, seed = 1)$data
+                data.rose <- ROSE(allFeaturesFormula, data = patients_training_set, p=pROSE, seed = 1)$data
                 patients_training_set <- data.rose
             }
+
+        if(TRAIN_SET_OVERSAMPLING_SYNTHETIC_SMOTE == TRUE)
+            {
+
+                this_patients_training_set <- patients_training_set
+                this_patients_training_set$"target" <- as.factor(this_patients_training_set$"target")
+
+                # cat("this_patients_training_set %>% str()\n")
+                # this_patients_training_set %>% str() %>% print()
+
+                cat("SMOTE oversampling\n")
+                newData <- SMOTE(allFeaturesFormula, data = this_patients_training_set, perc.over = imbal_number, perc.under = imbal_number)
+                patients_training_set <- newData
+            }
+
 
         cat("application of randomForest()\n")
         rf_output <- randomForest(as.factor(patients_training_set$target) ~ ., data=patients_training_set, importance=TRUE, proximity=TRUE)
@@ -312,6 +330,13 @@ for(exe_class_i in 1:execution_classification_number)
     # print(allExecutionsFinalRanking_mse_Gini[order(-allExecutionsFinalRanking_mse_Gini["MeanDecreaseAccuracy"]), ])
 
 
+    SAVE_RANKING_TO_CSV <- TRUE
+    if(SAVE_RANKING_TO_CSV) {
+        outputFileName <- paste0("../results/feature_ranking_SMOTE_rand", exe_num, ".csv")
+        write.csv(aggregateRankings, file=outputFileName, row.names=FALSE)
+        cat("saved file ", outputFileName, "\n")
+    }
+
     top_features_num <- TOP_FEATURES_NUMBER
     # selectedFeaturesNames <- rownames((allExecutionsFinalRanking_mse_Gini[order(-allExecutionsFinalRanking_mse_Gini["MeanDecreaseAccuracy"]), ])[1:top_features_num,])
     # selectedFeaturesNames <- rownames((aggregateRankings[order(aggregateRankings["aggregatedPosition"]), ])[1:top_features_num,])
@@ -332,7 +357,7 @@ for(exe_class_i in 1:execution_classification_number)
 
     # formula
     allFeaturesFormula <- as.formula(paste(as.factor(colnames(patients_training_set_reduced_features)[this_target_index]), '.', sep=' ~ ' ))
-	  if(TRAIN_SET_OVERSAMPLING_SYNTHETIC == TRUE)
+	  if(TRAIN_SET_OVERSAMPLING_SYNTHETIC_ROSE == TRUE)
 	      {
 		  thisP <- pROSE
 
@@ -375,15 +400,19 @@ cat("\n\n=== === === ===\n\n\n")
 
 computeExecutionTime()
 
+if(TRAIN_SET_OVERSAMPLING_SYNTHETIC_ROSE == TRUE) cat("oversampled with pROSE = ", pROSE, "\n", sep="")
+if(TRAIN_SET_OVERSAMPLING_SYNTHETIC_SMOTE == TRUE) cat("oversampled with SMOTE with perc.over & perc.under = ", imbal_number, "\n", sep="")
 
-numberOfFeaturesToPlot <- 20
-cat("We'll plot only the top ", numberOfFeaturesToPlot, " features\n", sep="")
-theseAggregateRankings <- aggregateRankings[(1:numberOfFeaturesToPlot),]
 
 FEATURE_RANKING_PLOT_DEPICTION <- TRUE
 if (FEATURE_RANKING_PLOT_DEPICTION == TRUE) {
     
         # print(colnames(dd_sorted_IncNodePurity_only))
+
+
+        numberOfFeaturesToPlot <- 20
+        cat("We'll plot only the top ", numberOfFeaturesToPlot, " features\n", sep="")
+        theseAggregateRankings <- aggregateRankings[(1:numberOfFeaturesToPlot),]
 
         folder <- "../results/"
         mkdirResultsCommand <- paste0("mkdir -p ", folder)
